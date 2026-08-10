@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -18,17 +18,17 @@
 </head>
 
 <body>
-    <header id="inicio" class="container-xxl fondo2 fixed-top">
+    <header id="inicio" class="site-header fondo2 fixed-top">
         <h1 id="Bandeate">Bandeate</h1>
-        <nav class="row navbar navbar-expand-lg navbar-dark-color: rgb(00, 66, 33) bg-dark-color: rgb(00, 66, 33)">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-xxl">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra"
                     aria-controls="barra" aria-expanded="false" aria-label="Menú hamburguesa">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="barra">
                     <ul class="navbar-nav text-center ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#inicio" data-ancla="true">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#inicio" data-ancla="true" aria-current="page">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#pantallas" data-ancla="true">Pantallas</a></li>
                         <li class="nav-item"><a class="nav-link" href="#vision" data-ancla="true">Visión</a>
                         </li>
@@ -55,7 +55,7 @@
                 <figure class="carousel-item active">
                     <picture>
                         <source media="(max-width: 576px)" srcset="img/banner/bannechico.jpg">
-                        <source media="(max-width: 650px)" srcset="img/banner/bannemovile.jpg">
+                        <source media="(max-width: 650px)" srcset="img/banner/bannechico.jpg">
                         <source media="(max-width: 992px)" srcset="img/banner/bannetablet.jpg">
                         <img class="d-block w-100" src="img/banner/bannepc.jpg" alt="guitara">
                     </picture>
@@ -65,10 +65,10 @@
                 </figure>
                 <figure class="carousel-item">
                     <picture>
-                        <source media="(max-width: 576px)" srcset="img\banner\banne1chico.jpg">
-                        <source media="(max-width: 650px)" srcset="img\banner\banne1cel.jpg">
-                        <source media="(max-width: 992px)" srcset="img\banner\banne1tablet.jpg">
-                        <img class="d-block w-100" src="img\banner\banne1pc.jpg" alt="musica">
+                        <source media="(max-width: 576px)" srcset="img/banner/banne1chico.jpg">
+                        <source media="(max-width: 650px)" srcset="img/banner/banne1cel.jpg">
+                        <source media="(max-width: 992px)" srcset="img/banner/banne1tablet.jpg">
+                        <img class="d-block w-100" src="img/banner/banne1pc.jpg" alt="musica">
                     </picture>
                     <figcaption class="carousel-caption">
                         <span class="h1">Busca la mejor atención</span>
@@ -76,10 +76,10 @@
                 </figure>
                 <figure class="carousel-item">
                     <picture>
-                        <source media="(max-width: 576px)" srcset="img\banner\banne2chico.jpg">
-                        <source media="(max-width: 650px)" srcset="img\banner\banne2cel.jpg">
-                        <source media="(max-width: 992px)" srcset="img\banner\banne2tabl.jpg">
-                        <img class="d-block w-100" src="img\banner\banne2pc.jpg" alt="guitarra">
+                        <source media="(max-width: 576px)" srcset="img/banner/banne2chico.jpg">
+                        <source media="(max-width: 650px)" srcset="img/banner/banne2cel.jpg">
+                        <source media="(max-width: 992px)" srcset="img/banner/banne2tablet.jpg">
+                        <img class="d-block w-100" src="img/banner/banne2pc.jpg" alt="guitarra">
                     </picture>
                     <figcaption class="carousel-caption">
                         <span class="h1">Interactua en tiempo real con otras personas</span>
@@ -87,13 +87,13 @@
                 </figure>
                 <figure class="carousel-item">
                     <picture>
-                        <source media="(max-width: 576px)" srcset="img\banner\banne3chico.jpg">
-                        <source media="(max-width: 650px)" srcset="img\banner\banne3cel.jpg">
-                        <source media="(max-width: 992px)" srcset="img\banner\banne3table.jpg">
-                        <img class="d-block w-100" src="img\banner\banne3pc.jpg" alt="musica">
+                        <source media="(max-width: 576px)" srcset="img/banner/banne3chico.jpg">
+                        <source media="(max-width: 650px)" srcset="img/banner/banne3cel.jpg">
+                        <source media="(max-width: 992px)" srcset="img/banner/banne3tablet.jpg">
+                        <img class="d-block w-100" src="img/banner/banne3pc.jpg" alt="musica">
                     </picture>
                     <figcaption class="carousel-caption">
-                        <span class="h1">Escucha tu musica favorita</span>
+                        <span class="h1">Escuchá tu música favorita</span>
                     </figcaption>
                 </figure>
             </div>
@@ -110,46 +110,46 @@
         </div>
     </section>
 
-    <section class="container-xxl fondo1">
+    <section class="container-xxl fondo1 screens-section">
         <span id="pantallas"></span>
         <h2 id="patantallas">Nuestras pantallas</h2>
-        <div id="galeria" class="row w-75 m-auto justify-content-center">
+        <div id="galeria" class="screens-gallery">
 
-            <div class="my-1 my-sm-3 my-md-2 col-sm-5 col-md-4 col-xl-2 m-md-auto">
+            <div class="screen-card">
                 <a data-fancybox="galeria" data-caption="inicio"
-                    data-srcset="img\pantallas\galeria1cel.jpg 576w, img\Pantallas\galeria1tablet.jpg 899w, img\pantallas\galeria1pc.jpg 1280w"
+                    data-srcset="img/pantallas/galeria1cel.jpg 576w, img/pantallas/galeria1tablet.jpg 899w, img/pantallas/galeria1pc.jpg 1280w"
                     href="img/pantallas/galeria1pc.jpg">
                     <img src="img/pantallas/galeria1pc.jpg" alt="pantalla1">
                 </a>
             </div>
 
-            <div class="my-1 my-sm-3 my-md-2 col-sm-5 col-md-4 col-xl-2 m-md-auto">
+            <div class="screen-card">
                 <a data-fancybox="galeria" data-caption="secciones de la app"
-                    data-srcset="img\pantallas\galeria2cel.jpg 576w, img\pantallas\galeria2tablet.jpg 899w, img\pantallas\galeria2pc.jpg 1280w"
+                    data-srcset="img/pantallas/galeria2cel.jpg 576w, img/pantallas/galeria2tablet.jpg 899w, img/pantallas/galeria2pc.jpg 1280w"
                     href="img\pantallas\galeria2pc.jpg">
                     <img src="img/pantallas/galeria2pc.jpg" alt="pantalla2">
                 </a>
             </div>
 
-            <div class="my-1 my-sm-3 my-md-2 col-sm-5 col-md-4 col-xl-2 m-md-auto">
+            <div class="screen-card">
                 <a data-fancybox="galeria" data-caption="artistas"
-                    data-srcset="img\pantallas\galeria3cel.jpg 576w, img\pantallas\galeria3tablet.jpg 899w, img\pantallas\galeria3pc.jpg 1280w"
+                    data-srcset="img/pantallas/galeria3cel.jpg 576w, img/pantallas/galeria3tablet.jpg 899w, img/pantallas/galeria3pc.jpg 1280w"
                     href="img\pantallas\galeria3pc.jpg">
                     <img src="img\pantallas\galeria3pc.jpg" alt="pantalla3">
                 </a>
             </div>
 
-            <div class="my-1 my-sm-3 my-md-2 col-sm-5 col-md-4 col-xl-2 m-md-auto">
+            <div class="screen-card">
                 <a data-fancybox="galeria" data-caption="chats"
-                    data-srcset="img\pantallas\galeria4cel.jpg 576w, img\pantallas\galeria4tablet.jpg 899w, img/pantallas/galeria4pc.jpg 1280w"
-                    href="img/Pantallas/galeria4pc.jpg">
+                    data-srcset="img/pantallas/galeria4cel.jpg 576w, img/pantallas/galeria4tablet.jpg 899w, img/pantallas/galeria4pc.jpg 1280w"
+                    href="img/pantallas/galeria4pc.jpg">
                     <img src="img/pantallas/galeria4pc.jpg" alt="pantalla4">
                 </a>
             </div>
 
-            <div class="my-1 my-sm-3 my-md-2 col-sm-5 col-md-4 col-xl-2 m-md-auto">
+            <div class="screen-card">
                 <a data-fancybox="galeria" data-caption="streaming"
-                    data-srcset="img\pantallas\galeria5cel.jpg 576w, img\pantallas\galeria5taablet.jpg 899w, img\pantallas\galeria5pc.jpg 1280w"
+                    data-srcset="img/pantallas/galeria5cel.jpg 576w, img/pantallas/galeria5taablet.jpg 899w, img/pantallas/galeria5pc.jpg 1280w"
                     href="img\pantallas\galeria5pc.jpg">
                     <img src="img/pantallas/galeria5pc.jpg" alt="pantalla5">
                 </a>
@@ -257,7 +257,6 @@
 
     
     <section id="video" class="container-xxl fondo2">
-        <span id="video"></span>
         <h2>Como usar la aplicación</h2>
         <p>Esto es un corto sobre como usar nuestra aplicacion.</p>
         <video src="img/videoappsimulado.mp4" preload="metadata" controls></video>
@@ -404,6 +403,54 @@
     <script src="css/js/picturefill.js"></script>
     <script src="css/js/jquery-3.6.0.min.js"></script>
     <script src="css/js/jquery.fancybox.min.js"></script>
+    <script>
+        (() => {
+            const header = document.querySelector('.site-header');
+            const links = [...document.querySelectorAll('.nav-link[data-ancla]')];
+            const inicioLink = links.find((link) => link.getAttribute('href') === '#inicio');
+            const sectionLinks = links.filter((link) => link !== inicioLink);
+            const hero = document.querySelector('#banner');
+            const targets = sectionLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+
+            const setActive = (id) => links.forEach((link) => {
+                const active = link.getAttribute('href') === `#${id}`;
+                link.classList.toggle('active', active);
+                active ? link.setAttribute('aria-current', 'page') : link.removeAttribute('aria-current');
+            });
+
+            links.forEach((link) => link.addEventListener('click', (event) => {
+                const target = document.querySelector(link.getAttribute('href'));
+                if (!target) return;
+                event.preventDefault();
+                window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - header.offsetHeight, behavior: 'smooth' });
+                document.querySelector('#barra').classList.remove('show');
+                setActive(target.id);
+            }));
+
+            const updateActiveSection = () => {
+                const scrollY = window.scrollY;
+                const headerOffset = header.offsetHeight;
+                const activationPoint = scrollY + headerOffset + 16;
+                const heroBottom = hero.getBoundingClientRect().bottom + scrollY;
+
+                // El inicio representa todo el hero y el comienzo de la página.
+                if (scrollY <= 8 || activationPoint < heroBottom) {
+                    setActive('inicio');
+                    return;
+                }
+
+                const current = targets.reduce((activeTarget, target) => {
+                    return target.getBoundingClientRect().top + scrollY <= activationPoint ? target : activeTarget;
+                }, null);
+
+                setActive(current ? current.id : 'inicio');
+            };
+
+            window.addEventListener('scroll', updateActiveSection, { passive: true });
+            window.addEventListener('resize', updateActiveSection);
+            updateActiveSection();
+        })();
+    </script>
 </body>
 
 </html>
