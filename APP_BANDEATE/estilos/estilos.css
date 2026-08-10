@@ -185,17 +185,73 @@ footer ul li a {
   background-position: 49px 0;
 }
 
-#video {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#video.video-section {
+  display: block;
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1rem, 4vw, 3rem);
+  overflow: hidden;
   color: white;
 }
 
-video {
-  max-width: 100%;
-  margin: 1.5em;
-  padding-bottom: 2em;
+#video .video-section__inner {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
+#video .video-section__heading {
+  max-width: 780px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+#video .video-section__heading h2 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: clamp(2.15rem, 4.5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.12;
+}
+
+#video .video-section__heading h2::after {
+  content: "";
+  display: block;
+  width: 3.75rem;
+  height: 0.25rem;
+  margin: 0.9rem auto 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#video .video-section__heading p {
+  margin: 1.15rem auto 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.7;
+}
+
+#video .video-section__frame {
+  width: min(100%, 960px);
+  margin: 0 auto;
+  padding: clamp(0.35rem, 0.8vw, 0.6rem);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: clamp(0.85rem, 1.5vw, 1.25rem);
+  background: rgba(3, 43, 78, 0.38);
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 43, 82, 0.28);
+  line-height: 0;
+}
+
+#video .video-section__frame video {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  aspect-ratio: 1376 / 808;
+  margin: 0;
+  padding: 0;
+  border-radius: clamp(0.55rem, 1vw, 0.9rem);
+  background: #061b2d;
+  object-fit: cover;
 }
 
 #reseñas p {
@@ -349,14 +405,6 @@ form > div:last-child {
 
   h3 {
     font-size: 1.8em;
-  }
-
-  video {
-    margin: 1.5em 15em;
-  }
-
-  #video p {
-    padding: 0 7em;
   }
 
   #reseña p {
