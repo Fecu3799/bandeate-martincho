@@ -1,0 +1,464 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    background-color: #138dff;
+}
+
+.fondo1 {
+    background-color: white;
+}
+
+.fondo2 {
+    background-color: #138dff;
+}
+
+strong {
+    font-weight: normal;
+}
+
+header {
+    padding: 3em 0;
+    position: relative;
+}
+
+#uno, #dos, #tres, #cuatro, #cinco{
+    position: relative;
+    top: -150px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a:target {
+    color: white;
+}
+
+.navbar a:hover {
+    color: black;
+}
+
+
+#porque{
+    margin: 0%;
+    padding:0;
+}
+
+
+
+#Bandeate {
+    width: 200px;
+    height: 115px;
+    background-image: url(../img/Logo/logocel.png);
+    left: calc(50% - 100px);
+    font-size: 0;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+}
+
+.navbar-nav {
+    padding-top: 4em;
+}
+
+.navbar .navbar-toggler {
+    border: none;
+}
+
+.navbar .navbar-toggler-icon {
+    background: url("../img/menu.png") no-repeat center center;
+    background-size: cover;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+#banner {
+    background-color: white;
+}
+
+section:first-of-type {
+    margin-top: 150px;
+}
+
+#mision{
+    padding-top: 2em;
+}
+
+h2 {
+    font-size: 2.8em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em .5em;
+}
+
+h3 {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 500;
+    margin: auto;
+}
+
+article {
+    padding: 0 1em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    margin: 1.6em;
+}
+
+#Vision ul li {
+    font-size: 1.2em;
+    line-height: 1.7em;
+    margin: 1em 2.6em;
+}
+
+figcaption {
+    text-align: center;
+}
+.card img{
+    padding: 20px;
+}
+#galeria {
+    text-align: center;
+    line-height: 0;
+    padding: 1.25em;
+    padding-bottom: 4em;
+}
+
+#galeria img {
+    margin: 0.2em;
+}
+
+footer {
+    padding: 2em 0;
+    text-align: center;
+}
+footer ul{
+    padding-left: 0;
+}
+
+footer :first-child li {
+    list-style: none;
+    color: white;
+    font-size: 0.8em;
+    line-height: 1.3em;
+}
+
+footer :last-child li {
+    width: 25px;
+    height: 25px;
+    list-style: none;
+    margin: 0 0.3em;
+    display: inline-block;
+}
+
+footer ul li a {
+    display: block;
+    height: 25px;
+    font-size: 0;
+    background-image: url(../img/redes_sociales.png);
+}
+
+#instagram {
+    background-position: -1px 0px;
+}
+
+#twitter {
+    background-position: 25px 0;
+}
+
+#facebook {
+    background-position: 49px 0;
+}
+
+
+
+
+
+#video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+video {
+    max-width: 100%;
+    margin: 1.5em;
+    padding-bottom: 2em;
+}
+
+
+
+#reseñas p {
+    margin: auto;
+    text-align: center;
+}
+
+#reseña {
+    background-color: white;
+    
+    
+}
+
+form {
+    margin: 0 auto;
+    padding: 3em 1.5em;
+    padding-bottom: 3em;
+}
+
+input[type="submit"] {
+    padding: .6em 1.3em;
+    background-color: #138dff;
+    color: white;
+    border: 0.5px solid #aaa;
+    margin: 0.5em 0;
+    margin-left: 0.5em;
+}
+
+input[type="reset"] {
+    padding: .6em 1em;
+    background-color: white;
+    border: 0.5px solid #aaa;
+    margin-right: .5em;
+    margin: 0.5em 0;
+}
+
+form>div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1em 0 0 0;
+}
+
+#Vision figure {
+    text-align: center;
+    margin-top: 1em;
+}
+
+#mision figure {
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+}
+
+#mision .row div{
+    margin-top: -1.6em;
+}
+
+
+
+@media screen and (min-width: 576px) {
+
+    h3 {
+        margin: .6em .2em;
+    }
+    
+    #porque p {
+        margin: 2em 1em;
+        vertical-align: middle;
+    }
+
+    #porque figure {
+        margin-top: 7em;
+    }
+
+    #mision div {
+        padding: 0 1em;
+    }
+
+    
+
+    #reseña p {
+        padding: 0 2em;
+    }
+
+    #reseña {
+        background-color: white;
+        
+        
+    }
+
+    form {
+        width: 30em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    #Bandeate {
+        background: url(../img/Logo/logopc.png);
+        width: 200px;
+        height: 40px;
+        top: 22%;
+        left: 2%;
+    }
+    
+    .navbar-nav {
+        padding-top: 0;
+    }
+
+    header {
+        padding: 0.5em;
+    }
+
+    section:first-of-type {
+        margin-top: 70px;
+    }
+
+    #uno, #dos, #tres, #cuatro, #cinco{
+    top: -70px;
+    }
+
+    #instagram:hover {
+        background-position: 0 -25px;
+    }
+
+    #twitter:hover {
+        background-position: 25px 25px;
+    }
+
+    #facebook:hover {
+        background-position: 50px 25px;
+    }
+
+
+    
+
+    p {
+        line-height: 1.4em;
+        font-size: 1.1em;
+        margin: 1em;
+    }
+
+    #Vision ul li {
+        font-size: 1.1em;
+        line-height: 1.4em;
+        margin: 0.5em 2em;
+    }
+
+    #porque div {
+        margin-top: 1em;
+    }
+
+    #mision .row div{
+        margin-top: 0;
+    }
+
+    article {
+        padding: 2em 1em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    video {
+        margin: 1.5em 15em;
+    }
+
+    #video p {
+        padding: 0 7em;
+    }
+
+    #reseña p {
+        padding: 0 7em;
+    }
+
+    #reseña {
+        background-color: white;
+        
+        
+    }
+
+    
+    #galeria img {
+        margin: 1em;
+    }
+
+    #banner figcaption span {
+        font-size: 4em;
+        color: white !important;
+       
+    }
+
+    footer {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer :first-child li {
+        margin-right: 9em;
+    }
+
+    footer :last-child li {
+        display: flex;
+        flex-direction: column;
+        margin: 1em 3em;
+    }
+
+    form {
+        width: 40em;
+        padding: 3em 0;
+    }
+
+    .control {
+        display: flex;
+        margin: 1em 0;
+    }
+
+    .control:first-child,
+    .control:nth-child(2) {
+        align-items: center;
+    }
+
+    .control label {
+        flex: 0 6.25em;
+        margin-right: 1em;
+    }
+
+    .control input,
+    .control textarea,
+    .control select,
+    .control>div {
+        flex: 1;
+        padding: .3rem .5rem;
+    }
+
+    .control div div {
+        margin: .3em 0;
+    }
+
+    input[type="submit"]{
+        margin-left: 1em;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #126fc5;
+    }
+
+    input[type="reset"]:hover {
+        background-color: whitesmoke;
+    }
+
+    
+    
+    
+    
+    
+
+}
