@@ -634,6 +634,178 @@ body {
     }
 }
 
+/* Estructura corregida del carrusel de pantallas */
+.screens-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 3.25rem;
+}
+
+#galeria.screens-viewport {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: .4rem 0 .85rem;
+}
+
+.screens-track {
+    align-items: flex-start;
+    padding: 0 .2rem;
+}
+
+.screens-track .screen-card {
+    display: block;
+    flex: 0 0 clamp(285px, 32vw, 330px);
+    height: auto;
+    background: transparent;
+}
+
+.screens-track .screen-card a {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: .7rem;
+    background: transparent;
+}
+
+#galeria .screens-track .screen-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: .7rem;
+    background: transparent;
+    object-fit: initial;
+}
+
+.screens-carousel .screens-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.screens-carousel .screens-arrow-prev { left: .25rem; }
+.screens-carousel .screens-arrow-next { right: .25rem; }
+
+@media screen and (min-width: 1100px) {
+    .screens-track .screen-card {
+        flex-basis: clamp(315px, 27vw, 350px);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .screens-carousel {
+        padding-right: 2.65rem;
+        padding-left: 2.65rem;
+    }
+
+    #galeria.screens-viewport {
+        width: 100%;
+        margin: 0;
+    }
+
+    .screens-track .screen-card {
+        flex-basis: 76vw;
+    }
+
+    #galeria .screens-track .screen-card img {
+        height: auto;
+    }
+}
+
+/* Ajustes finales del carrusel de pantallas */
+#galeria.screens-viewport {
+    position: relative;
+    padding: .35rem 0 .75rem;
+}
+
+.screens-track {
+    gap: clamp(1rem, 2vw, 1.75rem);
+    padding: 0 .15rem;
+}
+
+.screens-track .screen-card {
+    flex-basis: clamp(260px, 30vw, 320px);
+}
+
+.screens-track .screen-card a {
+    padding: 0;
+    border: 0;
+    border-radius: .7rem;
+    background: transparent;
+    box-shadow: 0 .3rem .9rem rgba(0, 67, 125, .16);
+}
+
+.screens-track .screen-card a:hover,
+.screens-track .screen-card a:focus-visible {
+    box-shadow: 0 .55rem 1.15rem rgba(0, 67, 125, .24);
+}
+
+.screens-track .screen-card img {
+    height: clamp(350px, 38vw, 460px);
+    background: transparent;
+    border-radius: .7rem;
+    object-fit: cover;
+}
+
+.screens-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 0 .25rem;
+    border: 0;
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(0, 70, 135, .5);
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    transform: translateY(-50%);
+    transition: opacity .2s ease, background-color .2s ease;
+}
+
+.screens-arrow:hover,
+.screens-arrow:focus-visible {
+    background: rgba(0, 70, 135, .78);
+}
+
+.screens-arrow-prev { left: .65rem; }
+.screens-arrow-next { right: .65rem; }
+
+.screens-arrow.is-muted {
+    opacity: .16;
+    pointer-events: none;
+}
+
+@media screen and (min-width: 1100px) {
+    .screens-track .screen-card {
+        flex-basis: clamp(280px, 24vw, 320px);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .screens-track .screen-card {
+        flex-basis: 72vw;
+    }
+
+    .screens-track .screen-card img {
+        height: min(82vw, 330px);
+    }
+
+    .screens-arrow {
+        width: 2.15rem;
+        height: 2.15rem;
+        font-size: 1.7rem;
+    }
+}
+
 /* Galería de pantallas */
 .screens-section {
     padding: 2.25rem clamp(1rem, 4vw, 3.5rem) 3rem;
@@ -702,5 +874,165 @@ body {
 
     .screens-gallery {
         grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+/* Carrusel horizontal de pantallas */
+#galeria.screens-viewport {
+    display: block;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: .5rem .25rem 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    line-height: normal;
+}
+
+#galeria.screens-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.screens-track {
+    display: flex;
+    align-items: stretch;
+    gap: clamp(1rem, 2vw, 1.75rem);
+    width: max-content;
+    padding: 0 .25rem;
+}
+
+.screens-track .screen-card {
+    flex: 0 0 clamp(210px, 30vw, 300px);
+    display: flex;
+}
+
+.screens-track .screen-card a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: .65rem;
+}
+
+.screens-track .screen-card img {
+    width: 100%;
+    height: clamp(300px, 35vw, 430px);
+    margin: 0;
+    object-fit: contain;
+    background: #f4f9ff;
+}
+
+@media screen and (min-width: 768px) {
+    .screens-track .screen-card {
+        flex-basis: clamp(235px, 30vw, 300px);
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .screens-track .screen-card {
+        flex-basis: clamp(240px, 22vw, 285px);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #galeria.screens-viewport {
+        margin-left: -.25rem;
+        width: calc(100% + .5rem);
+    }
+
+    .screens-track .screen-card {
+        flex-basis: 68vw;
+    }
+
+    .screens-track .screen-card img {
+        height: min(76vw, 330px);
+    }
+}
+
+/* Overrides definitivos: flechas externas y capturas a proporción natural */
+.screens-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 3.25rem;
+}
+
+#galeria.screens-viewport {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: .4rem 0 .85rem;
+}
+
+.screens-track {
+    align-items: flex-start;
+    padding: 0 .2rem;
+}
+
+.screens-track .screen-card {
+    display: block;
+    flex: 0 0 clamp(285px, 32vw, 330px);
+    height: auto;
+    background: transparent;
+}
+
+.screens-track .screen-card a {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: .7rem;
+    background: transparent;
+    box-shadow: 0 .3rem .9rem rgba(0, 67, 125, .16);
+}
+
+#galeria .screens-track .screen-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: .7rem;
+    background: transparent;
+    object-fit: initial;
+}
+
+.screens-carousel .screens-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.screens-carousel .screens-arrow-prev { left: .25rem; }
+.screens-carousel .screens-arrow-next { right: .25rem; }
+
+@media screen and (min-width: 1100px) {
+    .screens-track .screen-card {
+        flex-basis: clamp(315px, 27vw, 350px);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .screens-carousel {
+        padding-right: 2.65rem;
+        padding-left: 2.65rem;
+    }
+
+    #galeria.screens-viewport {
+        width: 100%;
+        margin: 0;
+    }
+
+    .screens-track .screen-card {
+        flex-basis: 76vw;
+    }
+
+    #galeria .screens-track .screen-card img {
+        height: auto;
     }
 }
