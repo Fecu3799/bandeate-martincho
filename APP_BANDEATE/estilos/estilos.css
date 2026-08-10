@@ -132,6 +132,160 @@ figcaption {
 .card img {
   padding: 20px;
 }
+
+#usuario.users-section {
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1rem, 4vw, 3rem);
+  color: white;
+  background: #138dff;
+}
+
+#usuario .users-section__inner {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding-top: clamp(2.75rem, 5vw, 4rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+#usuario .users-section__heading {
+  max-width: 720px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+#usuario .users-section__heading h2 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: clamp(2.15rem, 4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+#usuario .users-section__heading h2::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 0.25rem;
+  margin: 0.85rem auto 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#usuario .users-section__heading p {
+  margin: 1rem auto 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  line-height: 1.65;
+}
+
+#usuario .users-grid > [class*="col-"] {
+  align-items: stretch;
+}
+
+#usuario .user-card {
+  position: relative;
+  align-items: center;
+  min-height: 100%;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  overflow: hidden;
+  border: 1px solid rgba(7, 93, 169, 0.14);
+  border-radius: 1.1rem;
+  background: white;
+  box-shadow: 0 0.8rem 2rem rgba(0, 57, 108, 0.14);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+#usuario .user-card::before {
+  content: "“";
+  position: absolute;
+  top: 0.2rem;
+  right: 1rem;
+  color: rgba(19, 141, 255, 0.11);
+  font-family: Georgia, serif;
+  font-size: 6.5rem;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+#usuario .user-card__photo {
+  position: relative;
+  z-index: 1;
+  width: clamp(8.5rem, 13vw, 10rem);
+  margin: 0 auto;
+}
+
+#usuario .user-card__photo picture,
+#usuario .user-card__photo img {
+  display: block;
+  width: 100%;
+}
+
+#usuario .user-card__photo img {
+  aspect-ratio: 1;
+  padding: 0;
+  border: 4px solid white;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0.55rem 1.4rem rgba(0, 72, 132, 0.18);
+}
+
+#usuario .user-card .card-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1.35rem 0 0;
+}
+
+#usuario .user-card .card-title {
+  margin: 0 0 0.85rem;
+  color: #075da9;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+#usuario .user-card .card-text {
+  max-width: 30rem;
+  margin: 0;
+  color: #425c70;
+  font-size: clamp(0.95rem, 1.2vw, 1.04rem);
+  line-height: 1.65;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #usuario .user-card:hover {
+    border-color: rgba(7, 93, 169, 0.3);
+    box-shadow: 0 1.15rem 2.6rem rgba(0, 57, 108, 0.2);
+    transform: translateY(-0.35rem);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #usuario.users-section {
+    padding-top: 3.25rem;
+    padding-bottom: 4rem;
+  }
+
+  #usuario .users-section__inner {
+    padding-top: 2.75rem;
+  }
+
+  #usuario .users-grid {
+    max-width: 430px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #usuario .user-card {
+    padding: 1.5rem;
+  }
+}
 #galeria {
   text-align: center;
   line-height: 0;

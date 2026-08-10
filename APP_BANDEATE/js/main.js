@@ -63,27 +63,39 @@
             });
         };
 
+        let scrollLocked = false;
+
         links.forEach((link) => {
             link.addEventListener('click', (event) => {
                 const target = document.querySelector(link.getAttribute('href'));
                 if (!target) return;
 
                 event.preventDefault();
-                const top = target.getBoundingClientRect().top + window.scrollY - header.offsetHeight;
+                const isFixed = getComputedStyle(target).position === 'fixed';
+                const top = isFixed ? 0 : target.getBoundingClientRect().top + window.scrollY - header.offsetHeight;
                 window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
 
                 if (collapseElement.classList.contains('show')) collapse.hide();
                 setActive(target.id);
+                scrollLocked = true;
+                setTimeout(() => { scrollLocked = false; }, 800);
             });
         });
 
         scrollCoordinator.add(() => {
+            if (scrollLocked) return;
+
             const scrollY = window.scrollY;
             const activationPoint = scrollY + header.offsetHeight + 16;
             const heroBottom = hero.getBoundingClientRect().bottom + scrollY;
 
             if (scrollY <= 8 || activationPoint < heroBottom) {
                 setActive('inicio');
+                return;
+            }
+
+            if (targets.length && window.innerHeight + scrollY >= document.documentElement.scrollHeight - 10) {
+                setActive(targets[targets.length - 1].id);
                 return;
             }
 
