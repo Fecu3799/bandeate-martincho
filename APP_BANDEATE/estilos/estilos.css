@@ -40,15 +40,15 @@ img {
 }
 
 .navbar a {
-  color: white;
+  color: #075da9;
 }
 
 .navbar a:target {
-  color: white;
+  color: #075da9;
 }
 
 .navbar a:hover {
-  color: black;
+  color: #075da9;
 }
 
 #porque {
@@ -59,7 +59,7 @@ img {
 #Bandeate {
   width: 200px;
   height: 115px;
-  background-image: url(../img/Logo/logocel.png);
+  background-image: url(../img/logo/logo-isotipo.svg);
   left: calc(50% - 100px);
   font-size: 0;
   position: absolute;
@@ -78,6 +78,8 @@ img {
 .navbar .navbar-toggler-icon {
   background: url("../img/menu.png") no-repeat center center;
   background-size: cover;
+  filter: brightness(0) saturate(100%) invert(28%) sepia(87%) saturate(1474%)
+    hue-rotate(177deg) brightness(89%) contrast(95%);
 }
 
 .navbar .navbar-toggler:focus {
@@ -193,7 +195,10 @@ figcaption {
   background: white;
   box-shadow: 0 0.8rem 2rem rgba(0, 57, 108, 0.14);
   text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 #usuario .user-card::before {
@@ -494,7 +499,7 @@ form > div:last-child {
 
 @media screen and (min-width: 992px) {
   #Bandeate {
-    background: url(../img/Logo/logopc.png);
+    background: url(../img/logo/logo-texto.svg);
     width: 200px;
     height: 40px;
     top: 22%;
@@ -655,14 +660,17 @@ body {
   min-height: var(--header-height);
   padding: 0.45rem 0;
   z-index: 1030;
-  box-shadow: 0 2px 12px rgba(0, 45, 90, 0.16);
+  background-color: #fff;
+  border-bottom: 1px solid rgba(7, 93, 169, 0.12);
+  box-shadow: 0 2px 10px rgba(0, 45, 90, 0.08);
 }
 
 .site-header .navbar {
   min-height: calc(var(--header-height) - 0.9rem);
 }
 
-.navbar a {
+.site-header .navbar a {
+  color: #075da9;
   border-radius: 0.35rem;
   padding: 0.55rem 0.8rem;
   transition:
@@ -670,23 +678,32 @@ body {
     color 0.2s ease;
 }
 
-.navbar a.active,
-.navbar a:hover,
-.navbar a:focus-visible {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.18);
+.site-header .navbar.navbar-dark .navbar-nav .nav-link {
+  color: #075da9;
 }
 
-.navbar a.active {
-  box-shadow: inset 0 -2px 0 #fff;
+.site-header .navbar.navbar-dark .navbar-nav .nav-link.active,
+.site-header .navbar.navbar-dark .navbar-nav .nav-link:hover,
+.site-header .navbar.navbar-dark .navbar-nav .nav-link:focus-visible {
+  color: #075da9;
+  background-color: rgba(19, 141, 255, 0.1);
+}
+
+.site-header .navbar.navbar-dark .navbar-nav .nav-link.active {
+  box-shadow: inset 0 -2px 0 #138dff;
+}
+
+.site-header .navbar-toggler:focus-visible {
+  box-shadow: 0 0 0 0.2rem rgba(19, 141, 255, 0.22);
 }
 
 #Bandeate {
-  width: 190px;
+  width: 76px;
   height: 52px;
-  background: url(../img/logo/logocel.png) center / contain no-repeat;
-  left: 1rem;
+  background: url(../img/logo/logo-isotipo.svg) center / contain no-repeat;
+  left: 50%;
   top: 12px;
+  transform: translateX(-50%);
 }
 
 .navbar-nav {
@@ -791,17 +808,27 @@ body {
   opacity: 1;
 }
 
+@media screen and (min-width: 576px) {
+  #Bandeate {
+    width: 185px;
+    height: 36px;
+    top: 20px;
+    background-image: url(../img/logo/logo-texto.svg);
+  }
+}
+
 @media screen and (min-width: 992px) {
   :root {
     --header-height: 70px;
   }
 
   #Bandeate {
-    background: url(../img/logo/logopc.png) center / contain no-repeat;
-    width: 200px;
-    height: 40px;
-    top: 15px;
-    left: 2%;
+    background-image: url(../img/logo/logo-texto.svg);
+    width: 190px;
+    height: 36px;
+    top: 17px;
+    left: max(0.75rem, calc((100vw - 960px) / 2 + 0.75rem));
+    transform: none;
   }
 
   section:first-of-type {
@@ -809,9 +836,21 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  #Bandeate {
+    left: calc((100vw - 1140px) / 2 + 0.75rem);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #Bandeate {
+    left: calc((100vw - 1320px) / 2 + 0.75rem);
+  }
+}
+
 @media screen and (max-width: 575px) {
   #Bandeate {
-    width: 155px;
+    width: 76px;
   }
   #banner .carousel-caption {
     bottom: 16%;
@@ -1673,30 +1712,36 @@ body {
   max-width: 1120px;
   margin: clamp(3.25rem, 7vw, 5rem) auto 0;
   padding: clamp(2.75rem, 5vw, 4rem) 0 0;
-  border-top: 1px solid rgba(19, 141, 255, .2);
+  border-top: 1px solid rgba(19, 141, 255, 0.2);
   border-radius: 0;
   color: #17324d;
   background: transparent;
   box-shadow: none;
 }
 
-#Vision .vision-subheading h3 { color: #075da9; }
-#Vision .vision-subheading p { color: #4f6578; }
+#Vision .vision-subheading h3 {
+  color: #075da9;
+}
+#Vision .vision-subheading p {
+  color: #4f6578;
+}
 
 #Vision .strengths-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: .85rem;
+  gap: 0.85rem;
 }
 
 #Vision .strengths-grid li {
   min-height: 0;
   padding: 1rem 1rem 1rem 3.15rem;
-  border: 1px solid rgba(19, 141, 255, .2);
+  border: 1px solid rgba(19, 141, 255, 0.2);
   background: #f7fbff;
-  box-shadow: 0 .25rem .75rem rgba(0, 74, 137, .08);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 74, 137, 0.08);
 }
 
-#Vision .strengths-grid li::before { top: 1rem; }
+#Vision .strengths-grid li::before {
+  top: 1rem;
+}
 
 #Vision .values-list {
   gap: 1.35rem 2rem;
