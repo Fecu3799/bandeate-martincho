@@ -1870,3 +1870,163 @@ body {
     transform: none;
   }
 }
+
+/* Sistema global de secciones de la landing */
+:root {
+  --landing-content-width: 1180px;
+  --landing-gutter: clamp(1rem, 4vw, 3rem);
+  --landing-section-space: clamp(3.5rem, 7vw, 6rem);
+  --landing-surface: #fff;
+  --landing-surface-soft: #f4f9ff;
+}
+
+main,
+#Vision.vision-section,
+section.landing-section,
+.hero-section {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+section.landing-section {
+  padding: var(--landing-section-space) 0;
+}
+
+.landing-container {
+  width: 100%;
+  max-width: var(--landing-content-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--landing-gutter);
+  padding-left: var(--landing-gutter);
+}
+
+.hero-section {
+  background: #138dff;
+}
+
+.site-header + .hero-section {
+  margin-top: var(--header-height);
+}
+
+.landing-container--hero {
+  max-width: 1320px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.screens-section {
+  padding: var(--landing-section-space) 0;
+  background: var(--landing-surface);
+}
+
+.screens-section h2 {
+  margin-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+
+#Vision.vision-section {
+  padding: 0;
+  color: #17324d;
+  background: transparent;
+}
+
+#Vision .vision-overview {
+  background: var(--landing-surface-soft);
+}
+
+#Vision .vision-heading {
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+  padding: 0;
+}
+
+#Vision .vision-intro {
+  max-width: none;
+  margin: 0;
+}
+
+#Vision .strengths-block,
+#Vision .values-block {
+  background: var(--landing-surface);
+}
+
+#Vision .mission-block {
+  background: var(--landing-surface-soft);
+}
+
+#Vision .strengths-section,
+#Vision .editorial-section {
+  width: 100%;
+  max-width: var(--landing-content-width);
+  margin: 0 auto;
+  padding: 0 var(--landing-gutter);
+  border-top: 0;
+}
+
+#video.video-section {
+  padding: var(--landing-section-space) 0;
+  background: linear-gradient(135deg, #075da9, #138dff);
+}
+
+#video .video-section__inner,
+#usuario .users-section__inner {
+  width: 100%;
+  max-width: var(--landing-content-width);
+  margin: 0 auto;
+  padding-right: var(--landing-gutter);
+  padding-left: var(--landing-gutter);
+}
+
+#usuario.users-section {
+  padding: var(--landing-section-space) 0;
+  color: #17324d;
+  background: var(--landing-surface-soft);
+}
+
+#usuario .users-section__inner {
+  padding-top: 0;
+  border-top: 0;
+}
+
+#usuario .users-section__heading h2 {
+  color: #075da9;
+}
+
+#usuario .users-section__heading h2::after {
+  background: #138dff;
+}
+
+#usuario .users-section__heading p {
+  color: #4f6578;
+}
+
+#reseña.review-section {
+  background: linear-gradient(135deg, #075da9, #138dff);
+}
+
+#reseña .review-panel {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) var(--landing-gutter);
+  border: 1px solid rgba(7, 93, 169, 0.12);
+  border-radius: 1.1rem;
+  background: #fff;
+  box-shadow: 0 1.25rem 3rem rgba(0, 43, 82, 0.2);
+}
+
+#reseña .review-panel h2 {
+  padding-top: 0;
+  color: #075da9;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --landing-section-space: clamp(3rem, 12vw, 4rem);
+  }
+
+  #usuario.users-section {
+    padding-top: var(--landing-section-space);
+    padding-bottom: var(--landing-section-space);
+  }
+}
