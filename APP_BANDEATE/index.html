@@ -327,33 +327,43 @@
             <div class="review-panel">
         <div class="row justify-content-center">
             <div class="col-10">
-                <h2>Envianos tu reseña</h2>
-                <p>Deja tu opinion con nuestra aplicacion y ayudanos a mejorar nuestros servicios.</p>
-                <form action="formulario/enviar_formulario.php" method="post" enctype="multipart/form-data">
+                <div class="review-heading">
+                    <h2>Envíanos tu reseña</h2>
+                    <p>Dejá tu opinión sobre la aplicación y ayudanos a mejorar nuestros servicios.</p>
+                </div>
+                <form class="review-form" action="formulario/enviar_formulario.php" method="post" enctype="multipart/form-data">
 
                     <div class="mb-3 control">
                         <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"
+                            autocomplete="given-name" minlength="2" required aria-describedby="nombre-error">
+                        <small class="field-error" id="nombre-error">Ingresá un nombre válido.</small>
                     </div>
 
                     <div class="mb-3 control">
                         <label for="apellido" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="apellido" name="apellido">
+                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido"
+                            autocomplete="family-name" minlength="2" required aria-describedby="apellido-error">
+                        <small class="field-error" id="apellido-error">Ingresá un apellido válido.</small>
                     </div>
                    
                     <div class="mb-3 control">
                         <label for="mail" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="mail" name="mail">
+                        <input type="email" class="form-control" id="mail" name="mail" placeholder="Correo electrónico"
+                            autocomplete="email" required aria-describedby="mail-error">
+                        <small class="field-error" id="mail-error">Ingresá un correo válido.</small>
                     </div>
-                 
+
                     <div class="mb-3 control">
                         <label for="comentarios" class="form-label">Comentario</label>
                         <textarea name="comentario" class="form-control" id="comentarios" cols="22" rows="3"
-                            maxlength="80"></textarea>
+                            minlength="10" maxlength="80" placeholder="Escribí tu reseña"
+                            required aria-describedby="comentarios-error"></textarea>
+                        <small class="field-error" id="comentarios-error">Escribí un comentario de al menos 10 caracteres.</small>
                     </div>
-                    <div>
-                        <input type="reset" value="limpiar">
-                        <input type="submit" value="enviar">
+                    <div class="review-actions">
+                        <input type="reset" value="Limpiar">
+                        <input type="submit" value="Enviar">
                     </div>
                 </form>
             </div>
@@ -363,21 +373,38 @@
     </section>
 
 
-    <footer class="container-xxl fondo2">
-        <ul class="row justify-content-center w-75 m-auto">
-            <li>Alumnos: Martin Viegas Bordeira, Ignacio Lago</li>
-            <li>Carrera: Diseño Multimedial</li>
-            <li>Comisión: BP</li>
-            <li>Turno: Tarde</li>
-            <li>Materia: Maquetado y desarrollo web</li>
-            <li>Instancia de evaluación: Final</li>
-            <li>Docente: Omar Toyos</li>
-        </ul>
-        <ul>
-            <li><a href="https://www.instagram.com" id="instagram">Instagram</a></li>
-            <li><a href="https://es-la.facebook.com" id="facebook">Facebook</a></li>
-            <li><a href="https://twitter.com" id="twitter">Twitter</a></li>
-        </ul>
+    <footer id="site-footer" class="site-footer fondo2">
+        <div class="site-footer__inner">
+            <div class="site-footer__main">
+                <a class="site-footer__brand" href="#inicio" data-ancla="true" aria-label="Bandeate, volver al inicio">
+                    <img src="img/logo/logo-texto.svg" alt="Bandeate">
+                    <span>Conectando músicos, ideas y proyectos.</span>
+                </a>
+
+                <nav class="site-footer__nav" aria-label="Navegación del pie de página">
+                    <a class="site-footer__home-link" href="#inicio" data-ancla="true">Inicio</a>
+                    <a href="#pantallas" data-ancla="true">Pantallas</a>
+                    <a href="#vision" data-ancla="true">Visión</a>
+                    <a href="#video" data-ancla="true">Video</a>
+                    <a href="#usuario" data-ancla="true">Usuarios</a>
+                    <a href="#resenas" data-ancla="true">Reseñas</a>
+                </nav>
+
+                <ul class="site-footer__social" aria-label="Redes sociales">
+                    <li><a class="footer-social-link" href="https://www.instagram.com" id="instagram" target="_blank" rel="noopener noreferrer" aria-label="Bandeate en Instagram">Instagram</a></li>
+                    <li><a class="footer-social-link" href="https://es-la.facebook.com" id="facebook" target="_blank" rel="noopener noreferrer" aria-label="Bandeate en Facebook">Facebook</a></li>
+                    <li><a class="footer-social-link" href="https://twitter.com" id="twitter" target="_blank" rel="noopener noreferrer" aria-label="Bandeate en X">X</a></li>
+                </ul>
+            </div>
+
+            <div class="site-footer__bottom">
+                <p>© 2026 Bandeate. Todos los derechos reservados.</p>
+                <div class="site-footer__legal" aria-label="Información legal">
+                    <span>Privacidad</span>
+                    <span>Términos</span>
+                </div>
+            </div>
+        </div>
     </footer>
     
 

@@ -65,7 +65,7 @@
 
         let scrollLocked = false;
 
-        links.forEach((link) => {
+        const bindNavigation = (link) => {
             link.addEventListener('click', (event) => {
                 const target = document.querySelector(link.getAttribute('href'));
                 if (!target) return;
@@ -80,7 +80,12 @@
                 scrollLocked = true;
                 setTimeout(() => { scrollLocked = false; }, 800);
             });
-        });
+        };
+
+        links.forEach(bindNavigation);
+
+        const footerHomeLink = document.querySelector('.site-footer__home-link[data-ancla]');
+        if (footerHomeLink) bindNavigation(footerHomeLink);
 
         scrollCoordinator.add(() => {
             if (scrollLocked) return;
