@@ -9,10 +9,6 @@ body {
   background-color: #138dff;
 }
 
-.fondo1 {
-  background-color: white;
-}
-
 .fondo2 {
   background-color: #138dff;
 }
@@ -24,15 +20,6 @@ strong {
 header {
   padding: 3em 0;
   position: relative;
-}
-
-#uno,
-#dos,
-#tres,
-#cuatro,
-#cinco {
-  position: relative;
-  top: -150px;
 }
 
 img {
@@ -67,6 +54,12 @@ img {
   z-index: 1;
 }
 
+#Bandeate .site-header__home-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .navbar-nav {
   padding-top: 4em;
 }
@@ -92,10 +85,6 @@ img {
 
 section:first-of-type {
   margin-top: 150px;
-}
-
-#mision {
-  padding-top: 2em;
 }
 
 h2 {
@@ -371,11 +360,6 @@ figcaption {
   object-fit: cover;
 }
 
-#reseñas p {
-  margin: auto;
-  text-align: center;
-}
-
 #reseña {
   background-color: white;
 }
@@ -414,16 +398,6 @@ form > div:last-child {
   margin-top: 1em;
 }
 
-#mision figure {
-  margin: 0;
-  padding: 1em;
-  text-align: center;
-}
-
-#mision .row div {
-  margin-top: -1.6em;
-}
-
 @media screen and (min-width: 576px) {
   h3 {
     margin: 0.6em 0.2em;
@@ -436,10 +410,6 @@ form > div:last-child {
 
   #porque figure {
     margin-top: 7em;
-  }
-
-  #mision div {
-    padding: 0 1em;
   }
 
   #reseña p {
@@ -476,14 +446,6 @@ form > div:last-child {
     margin-top: 70px;
   }
 
-  #uno,
-  #dos,
-  #tres,
-  #cuatro,
-  #cinco {
-    top: -70px;
-  }
-
   p {
     line-height: 1.4em;
     font-size: 1.1em;
@@ -498,10 +460,6 @@ form > div:last-child {
 
   #porque div {
     margin-top: 1em;
-  }
-
-  #mision .row div {
-    margin-top: 0;
   }
 
   article {
@@ -557,10 +515,6 @@ form > div:last-child {
     padding: 0.3rem 0.5rem;
   }
 
-  .control div div {
-    margin: 0.3em 0;
-  }
-
   input[type="submit"] {
     margin-left: 1em;
   }
@@ -574,7 +528,7 @@ form > div:last-child {
   }
 }
 
-/* Primera mejora visual: header, hero y ritmo general */
+/* Header, hero y ritmo general */
 :root {
   --header-height: 76px;
   --blue: #138dff;
@@ -804,95 +758,7 @@ body {
   }
 }
 
-/* Estructura corregida del carrusel de pantallas */
-.screens-carousel {
-  position: relative;
-  width: 100%;
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 3.25rem;
-}
-
-#galeria.screens-viewport {
-  position: static;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0.4rem 0 0.85rem;
-}
-
-.screens-track {
-  align-items: flex-start;
-  padding: 0 0.2rem;
-}
-
-.screens-track .screen-card {
-  display: block;
-  flex: 0 0 clamp(285px, 32vw, 330px);
-  height: auto;
-  background: transparent;
-}
-
-.screens-track .screen-card a {
-  display: block;
-  width: 100%;
-  height: auto;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  border-radius: 0.7rem;
-  background: transparent;
-}
-
-#galeria .screens-track .screen-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  border-radius: 0.7rem;
-  background: transparent;
-  object-fit: initial;
-}
-
-.screens-carousel .screens-arrow {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.screens-carousel .screens-arrow-prev {
-  left: 0.25rem;
-}
-.screens-carousel .screens-arrow-next {
-  right: 0.25rem;
-}
-
-@media screen and (min-width: 1100px) {
-  .screens-track .screen-card {
-    flex-basis: clamp(315px, 27vw, 350px);
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .screens-carousel {
-    padding-right: 2.65rem;
-    padding-left: 2.65rem;
-  }
-
-  #galeria.screens-viewport {
-    width: 100%;
-    margin: 0;
-  }
-
-  .screens-track .screen-card {
-    flex-basis: min(65vw, calc(100vw - 7.5rem), 260px);
-  }
-
-  #galeria .screens-track .screen-card img {
-    height: auto;
-  }
-}
-
-/* Composición editorial definitiva de Visión */
+/* Composición editorial de Visión */
 #Vision .vision-media {
   display: grid;
   place-items: center;
@@ -1015,12 +881,6 @@ body {
   background: transparent;
 }
 
-@media screen and (max-width: 1050px) {
-  #Vision .strengths-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media screen and (max-width: 899px) {
   #Vision .mission-section,
   #Vision .values-section {
@@ -1055,12 +915,6 @@ body {
   }
 
   #Vision .values-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  #Vision .strengths-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1104,33 +958,12 @@ body {
   padding: 0;
 }
 
-#Vision .vision-logo-panel {
-  display: grid;
-  place-items: center;
-  margin: 0;
-  padding: clamp(1.25rem, 3vw, 2rem);
-  overflow: hidden;
-  border: 1px solid rgba(19, 141, 255, 0.18);
-  border-radius: 1rem;
-  background: linear-gradient(145deg, #f5fbff, #e3f3ff);
-  box-shadow: 0 0.8rem 2rem rgba(0, 74, 137, 0.12);
-}
-
-#Vision .vision-logo-panel img {
-  display: block;
-  width: 100%;
-  max-width: 310px;
-  height: auto;
-  border-radius: 0.65rem;
-}
-
 #Vision .vision-copy {
   max-width: 650px;
 }
 
 #Vision .vision-copy h3,
-#Vision .vision-subheading h3,
-#Vision .purpose-card h3 {
+#Vision .vision-subheading h3 {
   margin: 0 0 1rem;
   text-align: left;
   font-size: clamp(1.55rem, 2.5vw, 2rem);
@@ -1143,8 +976,7 @@ body {
 }
 
 #Vision .vision-copy p,
-#Vision .vision-subheading p,
-#Vision .purpose-card p {
+#Vision .vision-subheading p {
   margin: 0;
   font-size: clamp(1rem, 1.4vw, 1.12rem);
   line-height: 1.7;
@@ -1223,61 +1055,6 @@ body {
   border-color: rgba(19, 141, 255, 0.4);
 }
 
-#Vision .purpose-section {
-  max-width: 1180px;
-  margin: clamp(3rem, 7vw, 5.5rem) auto 0;
-}
-
-#Vision .purpose-grid {
-  display: grid;
-  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr) minmax(0, 1.12fr);
-  gap: clamp(1rem, 2.5vw, 1.75rem);
-  align-items: stretch;
-}
-
-#Vision .purpose-media {
-  margin: 0;
-  padding: 0.7rem;
-  border-radius: 1rem;
-  background: #eaf6ff;
-  box-shadow: 0 0.7rem 1.8rem rgba(0, 74, 137, 0.12);
-}
-
-#Vision .purpose-media picture,
-#Vision .purpose-media img {
-  display: block;
-  width: 100%;
-}
-
-#Vision .purpose-media img {
-  height: auto;
-  border-radius: 0.65rem;
-}
-
-#Vision .purpose-card {
-  padding: clamp(1.35rem, 3vw, 2rem);
-  border-radius: 1rem;
-  box-shadow: 0 0.7rem 1.8rem rgba(0, 74, 137, 0.12);
-}
-
-#Vision .mission-card {
-  color: #fff;
-  background: #075da9;
-}
-
-#Vision .mission-card h3 {
-  color: #fff;
-}
-
-#Vision .values-card {
-  border: 1px solid rgba(19, 141, 255, 0.2);
-  background: #f4faff;
-}
-
-#Vision .values-card h3 {
-  color: #075da9;
-}
-
 #Vision .values-list {
   display: grid;
   gap: 0.85rem;
@@ -1304,15 +1081,6 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  #Vision .purpose-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  }
-
-  #Vision .purpose-media {
-    grid-column: 1 / -1;
-    width: min(100%, 300px);
-    margin: 0 auto;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1326,22 +1094,9 @@ body {
     gap: 1.75rem;
   }
 
-  #Vision .vision-logo-panel {
-    width: min(100%, 320px);
-    margin: 0 auto;
-  }
-
   #Vision .vision-copy,
   #Vision .vision-subheading {
     max-width: none;
-  }
-
-  #Vision .purpose-grid {
-    grid-template-columns: 1fr;
-  }
-
-  #Vision .purpose-media {
-    grid-column: auto;
   }
 }
 
@@ -1360,7 +1115,7 @@ body {
   }
 }
 
-/* Ajuste del carrusel principal */
+/* Carrusel principal */
 #banner .carousel-inner {
   overflow: hidden;
 }
@@ -1425,7 +1180,7 @@ body {
   }
 }
 
-/* Ajustes finales del carrusel de pantallas */
+/* Carrusel de pantallas */
 #galeria.screens-viewport {
   position: relative;
   padding: 0.35rem 0 0.75rem;
@@ -1532,17 +1287,6 @@ body {
   line-height: 1.15;
 }
 
-.screens-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(1rem, 2.5vw, 2rem);
-  width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0;
-  line-height: 0;
-}
-
 .screen-card {
   min-width: 0;
 }
@@ -1576,20 +1320,10 @@ body {
   border-radius: 0.35rem;
 }
 
-@media screen and (min-width: 768px) {
-  .screens-gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 @media screen and (min-width: 1100px) {
   .screens-section {
     padding-top: 2.75rem;
     padding-bottom: 3.5rem;
-  }
-
-  .screens-gallery {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
@@ -1672,59 +1406,7 @@ body {
   }
 }
 
-/* Ajustes finales de la composición editorial de Visión */
-#Vision .strengths-section {
-  max-width: 1120px;
-  margin: clamp(3.25rem, 7vw, 5rem) auto 0;
-  padding: clamp(2.75rem, 5vw, 4rem) 0 0;
-  border-top: 1px solid rgba(19, 141, 255, 0.2);
-  border-radius: 0;
-  color: #17324d;
-  background: transparent;
-  box-shadow: none;
-}
-
-#Vision .vision-subheading h3 {
-  color: #075da9;
-}
-#Vision .vision-subheading p {
-  color: #4f6578;
-}
-
-#Vision .strengths-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.85rem;
-}
-
-#Vision .strengths-grid li {
-  min-height: 0;
-  padding: 1rem 1rem 1rem 3.15rem;
-  border: 1px solid rgba(19, 141, 255, 0.2);
-  background: #f7fbff;
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 74, 137, 0.08);
-}
-
-#Vision .strengths-grid li::before {
-  top: 1rem;
-}
-
-#Vision .values-list {
-  gap: 1.35rem 2rem;
-}
-
-@media screen and (max-width: 1050px) {
-  #Vision .strengths-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media screen and (max-width: 520px) {
-  #Vision .strengths-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Overrides definitivos: flechas externas y capturas a proporción natural */
+/* Flechas externas y capturas a proporción natural */
 .screens-carousel {
   position: relative;
   width: 100%;
@@ -1810,29 +1492,6 @@ body {
 
   #galeria .screens-track .screen-card img {
     height: auto;
-  }
-}
-
-/* === Scroll-reveal via IntersectionObserver === */
-@media (prefers-reduced-motion: no-preference) {
-  .scroll-reveal {
-    opacity: 0;
-    transition:
-      opacity 0.65s ease,
-      transform 0.65s ease;
-  }
-
-  .scroll-reveal.from-left {
-    transform: translateX(-44px);
-  }
-
-  .scroll-reveal.from-right {
-    transform: translateX(44px);
-  }
-
-  .scroll-reveal.is-visible {
-    opacity: 1;
-    transform: none;
   }
 }
 
@@ -1996,7 +1655,7 @@ section.landing-section {
   }
 }
 
-/* Ajustes puntuales de ancho y fondos posteriores */
+/* Ancho y fondos */
 .landing-container--hero {
   max-width: none;
 }
@@ -2182,16 +1841,12 @@ section.landing-section {
 }
 
 #reseña .field-error {
-  display: block;
-  margin-top: 0.35rem;
-  font-size: 0.76rem;
-  line-height: 1.4;
-}
-
-#reseña .field-error {
   display: none;
+  margin-top: 0.35rem;
   color: #b42318;
+  font-size: 0.76rem;
   font-weight: 500;
+  line-height: 1.4;
 }
 
 #reseña .form-control:user-invalid ~ .field-error,

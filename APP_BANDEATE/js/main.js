@@ -32,8 +32,7 @@
             add(task) {
                 tasks.add(task);
                 requestRender();
-            },
-            request: requestRender
+            }
         };
     };
 
@@ -83,6 +82,9 @@
         };
 
         links.forEach(bindNavigation);
+
+        const headerHomeLink = document.querySelector('.site-header__home-link[data-ancla]');
+        if (headerHomeLink) bindNavigation(headerHomeLink);
 
         const footerHomeLink = document.querySelector('.site-footer__home-link[data-ancla]');
         if (footerHomeLink) bindNavigation(footerHomeLink);
