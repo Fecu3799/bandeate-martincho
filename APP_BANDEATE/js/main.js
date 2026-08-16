@@ -191,9 +191,38 @@
         updateArrows();
     };
 
+    const initReviewForm = () => {
+        const form = document.querySelector('.review-form');
+        const success = document.querySelector('#review-success');
+        if (!form || !success) return;
+
+        // En local no hay servidor de mail disponible, así que simulamos el envío
+        // para poder mostrar el flujo completo en una demo. Fuera de localhost
+        // (hosting real) el formulario se manda de verdad, como estaba pensado.
+        const esEntornoLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+        if (!esEntornoLocal) return;
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            form.reset();
+            success.hidden = false;
+        });
+
+        form.addEventListener('input', () => {
+            success.hidden = true;
+        });
+    };
+
     onReady(() => {
         const scrollCoordinator = createScrollCoordinator();
         initNavigation(scrollCoordinator);
         initScreensCarousel();
+        initReviewForm();
     });
 })();

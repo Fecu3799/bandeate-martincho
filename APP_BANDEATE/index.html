@@ -332,6 +332,10 @@
                 </div>
                 <form class="review-form" action="formulario/enviar_formulario.php" method="post" enctype="multipart/form-data">
 
+                    <p class="form-success" id="review-success" role="status" aria-live="polite" hidden>
+                        ¡Gracias! Tu reseña fue enviada correctamente.
+                    </p>
+
                     <div class="mb-3 control">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"
