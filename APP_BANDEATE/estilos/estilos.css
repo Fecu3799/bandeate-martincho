@@ -302,48 +302,6 @@ figcaption {
   margin: 0.2em;
 }
 
-footer {
-  padding: 2em 0;
-  text-align: center;
-}
-footer ul {
-  padding-left: 0;
-}
-
-footer :first-child li {
-  list-style: none;
-  color: white;
-  font-size: 0.8em;
-  line-height: 1.3em;
-}
-
-footer :last-child li {
-  width: 25px;
-  height: 25px;
-  list-style: none;
-  margin: 0 0.3em;
-  display: inline-block;
-}
-
-footer ul li a {
-  display: block;
-  height: 25px;
-  font-size: 0;
-  background-image: url(../img/redes_sociales.png);
-}
-
-#instagram {
-  background-position: -1px 0px;
-}
-
-#twitter {
-  background-position: 25px 0;
-}
-
-#facebook {
-  background-position: 49px 0;
-}
-
 #video.video-section {
   display: block;
   padding: clamp(3.5rem, 7vw, 6rem) clamp(1rem, 4vw, 3rem);
@@ -526,18 +484,6 @@ form > div:last-child {
     top: -70px;
   }
 
-  #instagram:hover {
-    background-position: 0 -25px;
-  }
-
-  #twitter:hover {
-    background-position: 25px 25px;
-  }
-
-  #facebook:hover {
-    background-position: 50px 25px;
-  }
-
   p {
     line-height: 1.4em;
     font-size: 1.1em;
@@ -581,23 +527,6 @@ form > div:last-child {
   #banner figcaption span {
     font-size: 4em;
     color: white !important;
-  }
-
-  footer {
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  footer :first-child li {
-    margin-right: 9em;
-  }
-
-  footer :last-child li {
-    display: flex;
-    flex-direction: column;
-    margin: 1em 3em;
   }
 
   form {
@@ -656,7 +585,9 @@ body {
 }
 
 .site-header {
-  width: 100%;
+  right: 0;
+  left: 0;
+  width: auto;
   min-height: var(--header-height);
   padding: 0.45rem 0;
   z-index: 1030;
@@ -691,6 +622,14 @@ body {
 
 .site-header .navbar.navbar-dark .navbar-nav .nav-link.active {
   box-shadow: inset 0 -2px 0 #138dff;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1099px) {
+  .site-header .navbar a {
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+    font-size: 0.94rem;
+  }
 }
 
 .site-header .navbar-toggler:focus-visible {
@@ -859,9 +798,9 @@ body {
   }
   #banner .carousel-control-prev,
   #banner .carousel-control-next {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-top: -1.25rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-top: -1.375rem;
   }
 }
 
@@ -945,7 +884,7 @@ body {
   }
 
   .screens-track .screen-card {
-    flex-basis: 76vw;
+    flex-basis: min(65vw, calc(100vw - 7.5rem), 260px);
   }
 
   #galeria .screens-track .screen-card img {
@@ -1083,9 +1022,19 @@ body {
 }
 
 @media screen and (max-width: 899px) {
-  #Vision .mission-section {
+  #Vision .mission-section,
+  #Vision .values-section {
     grid-template-columns: 1fr;
     gap: 1.75rem;
+  }
+
+  #Vision .vision-media {
+    width: min(100%, 320px);
+    margin: 0 auto;
+  }
+
+  #Vision .mission-section {
+    align-items: start;
   }
 
   #Vision .mission-media {
@@ -1564,8 +1513,8 @@ body {
   }
 
   .screens-arrow {
-    width: 2.15rem;
-    height: 2.15rem;
+    width: 2.75rem;
+    height: 2.75rem;
     font-size: 1.7rem;
   }
 }
@@ -1655,6 +1604,8 @@ body {
   overflow-y: hidden;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline proximity;
   touch-action: pan-x;
   line-height: normal;
 }
@@ -1674,6 +1625,8 @@ body {
 .screens-track .screen-card {
   flex: 0 0 clamp(210px, 30vw, 300px);
   display: flex;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
 }
 
 .screens-track .screen-card a {
@@ -1852,7 +1805,7 @@ body {
   }
 
   .screens-track .screen-card {
-    flex-basis: 76vw;
+    flex-basis: min(65vw, calc(100vw - 7.5rem), 260px);
   }
 
   #galeria .screens-track .screen-card img {
@@ -2091,13 +2044,6 @@ section.landing-section {
 .screens-section .screens-arrow:hover,
 .screens-section .screens-arrow:focus-visible {
   background: rgba(0, 45, 90, 0.82);
-}
-
-footer {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  background: #138dff;
 }
 
 /* Formulario de reseña */
@@ -2447,30 +2393,47 @@ footer {
 }
 
 .site-footer .footer-social-link {
+  position: relative;
   display: block;
   width: 38px;
   height: 38px;
   padding: 6px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 50%;
+  overflow: hidden;
   background-color: rgba(255, 255, 255, 0.1);
-  background-image: url(../img/redes_sociales.png);
-  background-repeat: no-repeat;
+  background-image: none;
   font-size: 0;
   box-shadow: none;
   transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
-.site-footer #instagram {
-  background-position: 5px 6px;
+.site-footer .footer-social-link::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/redes_sociales.png);
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 
-.site-footer #facebook {
-  background-position: -20px 2px;
+.site-footer #instagram::before {
+  top: 6px;
+  left: 6px;
+  background-position: 0 0;
 }
 
-.site-footer #twitter {
-  background-position: -44px 6px;
+.site-footer #facebook::before {
+  top: 2px;
+  left: 5px;
+  background-position: -25px 0;
+}
+
+.site-footer #twitter::before {
+  top: 6px;
+  left: 6px;
+  background-position: -50px 0;
 }
 
 .site-footer .footer-social-link:hover {
@@ -2479,19 +2442,19 @@ footer {
   transform: translateY(-2px);
 }
 
-.site-footer #instagram:hover,
-.site-footer #instagram:focus-visible {
-  background-position: 5px -19px;
+.site-footer #instagram:hover::before,
+.site-footer #instagram:focus-visible::before {
+  background-position: 0 -25px;
 }
 
-.site-footer #facebook:hover,
-.site-footer #facebook:focus-visible {
-  background-position: -20px -23px;
+.site-footer #facebook:hover::before,
+.site-footer #facebook:focus-visible::before {
+  background-position: -25px -25px;
 }
 
-.site-footer #twitter:hover,
-.site-footer #twitter:focus-visible {
-  background-position: -44px -19px;
+.site-footer #twitter:hover::before,
+.site-footer #twitter:focus-visible::before {
+  background-position: -50px -25px;
 }
 
 .site-footer a:focus-visible {
@@ -2531,6 +2494,45 @@ footer {
     grid-column: 1 / -1;
     grid-row: 2;
     justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .site-header .navbar-collapse {
+    width: 100%;
+    margin-top: 1.0625rem;
+  }
+
+  .site-header .navbar-toggler {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .site-header .navbar-nav .nav-link,
+  .site-footer__nav a {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-footer__social li,
+  .site-footer__social li:first-child,
+  .site-footer__social li:last-child,
+  .site-footer .footer-social-link {
+    width: 44px;
+    height: 44px;
+  }
+
+  .site-footer #instagram::before,
+  .site-footer #twitter::before {
+    top: 9px;
+    left: 9px;
+  }
+
+  .site-footer #facebook::before {
+    top: 5px;
+    left: 8px;
   }
 }
 

@@ -414,6 +414,11 @@
       .sr-izq   { opacity: 0; transform: translateX(-48px); }
       .sr-der   { opacity: 0; transform: translateX( 48px); }
       .sr-ok    { opacity: 1; transform: none; }
+
+      @media (max-width: 1199px) {
+        .sr-izq,
+        .sr-der { transform: translateY(24px); }
+      }
     </style>
     <script>
       window.addEventListener('load', function () {
