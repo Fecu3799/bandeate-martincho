@@ -1,460 +1,531 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bandeate</title>
-    <link rel="icon" type="image/svg+xml" href="img/logo/logo-isotipo.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="estilos/estilos.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bandeate</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo/logo-isotipo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="estilos/estilos.css" />
 </head>
 
 <body>
-    <header id="inicio" class="site-header fondo2 fixed-top">
-        <h1 id="Bandeate">
-            <a class="site-header__home-link" href="#inicio" data-ancla="true" aria-label="Ir al inicio">Bandeate</a>
-        </h1>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-xxl">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra"
-                    aria-controls="barra" aria-expanded="false" aria-label="Menú hamburguesa">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="barra">
-                    <ul class="navbar-nav text-center ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#inicio" data-ancla="true" aria-current="page">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#pantallas" data-ancla="true">Pantallas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#vision" data-ancla="true">Visión</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#video" data-ancla="true">Video</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#usuario" data-ancla="true">Usuarios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#resenas" data-ancla="true">Reseñas</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <section class="hero-section">
-        <div class="landing-container landing-container--hero">
-            <div id="banner" class="carousel slide" data-bs-ride="carousel">
-
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active" aria-current="true"
-                    aria-label="Imagen 1"></button>
-                <button type="button" data-bs-target="#banner" data-bs-slide-to="1" aria-label="imagen 2"></button>
-                <button type="button" data-bs-target="#banner" data-bs-slide-to="2" aria-label="imagen 3"></button>
-                <button type="button" data-bs-target="#banner" data-bs-slide-to="3" aria-label="imagen 4"></button>
-            </div>
-
-            <div class="carousel-inner">
-                <figure class="carousel-item active">
-                    <picture>
-                        <source media="(max-width: 650px)" srcset="img/hero/hero-1-mobile.png">
-                        <img class="d-block w-100" id="hero-4" src="img/hero/hero-4-desktop.png" alt="Persona disfrutando música con auriculares">
-                    </picture>
-                    <figcaption class="carousel-caption">
-                        <span class="h1">Encontra tu nicho musical</span>
-                    </figcaption>
-                </figure>
-                <figure class="carousel-item">
-                    <picture>
-                        <source media="(max-width: 650px)" srcset="img/hero/hero-2-mobile.png">
-                        <img class="d-block w-100" id="hero-3" src="img/hero/hero-3-desktop.png" alt="Músico tocando una guitarra acústica">
-                    </picture>
-                    <figcaption class="carousel-caption">
-                        <span class="h1">Busca la mejor atención</span>
-                    </figcaption>
-                </figure>
-                <figure class="carousel-item">
-                    <picture>
-                        <source media="(max-width: 650px)" srcset="img/hero/hero-3-mobile.png">
-                        <img class="d-block w-100" id="hero-2" src="img/hero/hero-2-desktop.png" alt="Baterista tocando en un estudio musical">
-                    </picture>
-                    <figcaption class="carousel-caption">
-                        <span class="h1">Interactua en tiempo real con otras personas</span>
-                    </figcaption>
-                </figure>
-                <figure class="carousel-item">
-                    <picture>
-                        <source media="(max-width: 650px)" srcset="img/hero/hero-4-mobile.png">
-                        <img class="d-block w-100" id="hero-1" src="img/hero/hero-1-desktop.png" alt="Cantante interpretando una canción en estudio">
-                    </picture>
-                    <figcaption class="carousel-caption">
-                        <span class="h1">Escuchá tu música favorita</span>
-                    </figcaption>
-                </figure>
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">atras</span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">adelante</span>
-            </button>
-            </div>
+  <header id="inicio" class="site-header fondo2 fixed-top">
+    <h1 id="Bandeate">
+      <a class="site-header__home-link" href="#inicio" data-ancla="true" aria-label="Ir al inicio">Bandeate</a>
+    </h1>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-xxl">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra"
+          aria-controls="barra" aria-expanded="false" aria-label="Menú hamburguesa">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="barra">
+          <ul class="navbar-nav text-center ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#inicio" data-ancla="true" aria-current="page">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pantallas" data-ancla="true">Pantallas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#vision" data-ancla="true">Visión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#video" data-ancla="true">Video</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#usuario" data-ancla="true">Usuarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#resenas" data-ancla="true">Reseñas</a>
+            </li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </nav>
+  </header>
+  <section class="hero-section">
+    <div class="landing-container landing-container--hero">
+      <div id="banner" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Imagen 1"></button>
+          <button type="button" data-bs-target="#banner" data-bs-slide-to="1" aria-label="imagen 2"></button>
+          <button type="button" data-bs-target="#banner" data-bs-slide-to="2" aria-label="imagen 3"></button>
+          <button type="button" data-bs-target="#banner" data-bs-slide-to="3" aria-label="imagen 4"></button>
+        </div>
 
-    <section class="landing-section screens-section">
+        <div class="carousel-inner">
+          <figure class="carousel-item active">
+            <picture>
+              <source media="(max-width: 650px)" srcset="img/hero/hero-1-mobile.png" />
+              <img class="d-block w-100" id="hero-4" src="img/hero/hero-4-desktop.png"
+                alt="Persona disfrutando música con auriculares" />
+            </picture>
+            <figcaption class="carousel-caption">
+              <span class="h1">Encontra tu nicho musical</span>
+            </figcaption>
+          </figure>
+          <figure class="carousel-item">
+            <picture>
+              <source media="(max-width: 650px)" srcset="img/hero/hero-2-mobile.png" />
+              <img class="d-block w-100" id="hero-3" src="img/hero/hero-3-desktop.png"
+                alt="Músico tocando una guitarra acústica" />
+            </picture>
+            <figcaption class="carousel-caption">
+              <span class="h1">Busca la mejor atención</span>
+            </figcaption>
+          </figure>
+          <figure class="carousel-item">
+            <picture>
+              <source media="(max-width: 650px)" srcset="img/hero/hero-3-mobile.png" />
+              <img class="d-block w-100" id="hero-2" src="img/hero/hero-2-desktop.png"
+                alt="Baterista tocando en un estudio musical" />
+            </picture>
+            <figcaption class="carousel-caption">
+              <span class="h1">Interactua en tiempo real con otras personas</span>
+            </figcaption>
+          </figure>
+          <figure class="carousel-item">
+            <picture>
+              <source media="(max-width: 650px)" srcset="img/hero/hero-4-mobile.png" />
+              <img class="d-block w-100" id="hero-1" src="img/hero/hero-1-desktop.png"
+                alt="Cantante interpretando una canción en estudio" />
+            </picture>
+            <figcaption class="carousel-caption">
+              <span class="h1">Escuchá tu música favorita</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">atras</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">adelante</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-section screens-section">
+    <div class="landing-container">
+      <span id="pantallas"></span>
+      <h2 id="pantallas-title">Nuestras pantallas</h2>
+      <div class="screens-carousel">
+        <button class="screens-arrow screens-arrow-prev" type="button" aria-label="Ver pantallas anteriores">
+          &#8249;
+        </button>
+        <div id="galeria" class="screens-viewport" aria-label="Carrusel de pantallas de la aplicación">
+          <div class="screens-track">
+            <div class="screen-card">
+              <a data-fancybox="galeria" data-caption="Inicio" href="img/pantallas/pantalla-1.png">
+                <img src="img/pantallas/pantalla-1.png" alt="pantalla1" width="1080" height="1920" loading="lazy" />
+              </a>
+            </div>
+
+            <div class="screen-card">
+              <a data-fancybox="galeria" data-caption="Secciones de la app" href="img/pantallas/pantalla-2.png">
+                <img src="img/pantallas/pantalla-2.png" alt="pantalla2" width="1080" height="1920" loading="lazy" />
+              </a>
+            </div>
+
+            <div class="screen-card">
+              <a data-fancybox="galeria" data-caption="Artistas" href="img/pantallas/pantalla-3.png">
+                <img src="img/pantallas/pantalla-3.png" alt="pantalla3" width="1080" height="1920" loading="lazy" />
+              </a>
+            </div>
+
+            <div class="screen-card">
+              <a data-fancybox="galeria" data-caption="Chats" href="img/pantallas/pantalla-4.png">
+                <img src="img/pantallas/pantalla-4.png" alt="pantalla4" width="1080" height="1920" loading="lazy" />
+              </a>
+            </div>
+
+            <div class="screen-card">
+              <a data-fancybox="galeria" data-caption="Streaming" href="img/pantallas/pantalla-5.png">
+                <img src="img/pantallas/pantalla-5.png" alt="pantalla5" width="1080" height="1920" loading="lazy" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <button class="screens-arrow screens-arrow-next" type="button" aria-label="Ver más pantallas">
+          &#8250;
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <article id="Vision" class="vision-section">
+      <span id="vision"></span>
+
+      <section class="landing-section vision-overview">
         <div class="landing-container">
-            <span id="pantallas"></span>
-            <h2 id="pantallas-title">Nuestras pantallas</h2>
-            <div class="screens-carousel">
-            <button class="screens-arrow screens-arrow-prev" type="button" aria-label="Ver pantallas anteriores">&#8249;</button>
-            <div id="galeria" class="screens-viewport" aria-label="Carrusel de pantallas de la aplicación">
-                <div class="screens-track">
+          <header class="vision-heading">
+            <h2>Visión</h2>
+          </header>
 
-            <div class="screen-card">
-                <a data-fancybox="galeria" data-caption="inicio"
-                    data-srcset="img/pantallas/galeria1cel.jpg 576w, img/pantallas/galeria1tablet.jpg 899w, img/pantallas/galeria1pc.jpg 1280w"
-                    href="img/pantallas/galeria1pc.jpg">
-                    <img src="img/pantallas/galeria1pc.jpg" alt="pantalla1">
-                </a>
-            </div>
+          <div id="porque" class="vision-intro scroll-section">
+            <figure class="vision-media">
+              <picture>
+                <source media="(max-width: 576px)" srcset="img/mockup/mockupcel.jpg" />
+                <source media="(max-width: 899px)" srcset="img/mockup/mockuptablet.jpg" />
+                <img src="img/mockup/mockuppc.jpg" alt="Isologo de Bandeate" />
+              </picture>
+            </figure>
 
-            <div class="screen-card">
-                <a data-fancybox="galeria" data-caption="secciones de la app"
-                    data-srcset="img/pantallas/galeria2cel.jpg 576w, img/pantallas/galeria2tablet.jpg 899w, img/pantallas/galeria2pc.jpg 1280w"
-                    href="img/pantallas/galeria2pc.jpg">
-                    <img src="img/pantallas/galeria2pc.jpg" alt="pantalla2">
-                </a>
+            <div class="vision-copy">
+              <h3>¿Por qué existimos?</h3>
+              <p>
+                Con esta app, buscamos unir a los artistas para que puedan conocerse, interactuar
+                y formar bandas para producir música en la misma app. Pueden promocionar su
+                contenido, escucharse entre ellos, organizar eventos y ¡mucho más!
+              </p>
+              <p>
+                Este sistema funcionaría a través de la recopilación de información aportada por
+                los mismos usuarios, actualizando el sitio de forma continua.
+              </p>
             </div>
-
-            <div class="screen-card">
-                <a data-fancybox="galeria" data-caption="artistas"
-                    data-srcset="img/pantallas/galeria3cel.jpg 576w, img/pantallas/galeria3tablet.jpg 899w, img/pantallas/galeria3pc.jpg 1280w"
-                    href="img/pantallas/galeria3pc.jpg">
-                    <img src="img/pantallas/galeria3pc.jpg" alt="pantalla3">
-                </a>
-            </div>
-
-            <div class="screen-card">
-                <a data-fancybox="galeria" data-caption="chats"
-                    data-srcset="img/pantallas/galeria4cel.jpg 576w, img/pantallas/galeria4tablet.jpg 899w, img/pantallas/galeria4pc.jpg 1280w"
-                    href="img/pantallas/galeria4pc.jpg">
-                    <img src="img/pantallas/galeria4pc.jpg" alt="pantalla4">
-                </a>
-            </div>
-
-            <div class="screen-card">
-                <a data-fancybox="galeria" data-caption="streaming"
-                    data-srcset="img/pantallas/galeria5cel.jpg 576w, img/pantallas/galeria5tablet.jpg 899w, img/pantallas/galeria5pc.jpg 1280w"
-                    href="img/pantallas/galeria5pc.jpg">
-                    <img src="img/pantallas/galeria5pc.jpg" alt="pantalla5">
-                </a>
-            </div>
-
-                </div>
-            </div>
-            <button class="screens-arrow screens-arrow-next" type="button" aria-label="Ver más pantallas">&#8250;</button>
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-   
+      <section class="landing-section strengths-block">
+        <div id="puntosfuertes" class="landing-container strengths-section scroll-section">
+          <div class="vision-subheading">
+            <h3>Puntos fuertes</h3>
+            <p>
+              Contamos con herramientas y servicios pensados para acompañar a nuestra comunidad.
+            </p>
+          </div>
 
-    <main>
-        <article id="Vision" class="vision-section">
-            <span id="vision"></span>
-
-            <section class="landing-section vision-overview">
-                <div class="landing-container">
-            <header class="vision-heading">
-                <h2>Visión</h2>
-            </header>
-
-            <div id="porque" class="vision-intro scroll-section">
-                <figure class="vision-media">
-                    <picture>
-                        <source media="(max-width: 576px)" srcset="img/mockup/mockupcel.jpg">
-                        <source media="(max-width: 899px)" srcset="img/mockup/mockuptablet.jpg">
-                        <img src="img/mockup/mockuppc.jpg" alt="Isologo de Bandeate">
-                    </picture>
-                </figure>
-
-                <div class="vision-copy">
-                    <h3>¿Por qué existimos?</h3>
-                    <p>Con esta app, buscamos unir a los artistas para que puedan conocerse, interactuar y formar bandas para producir música en la misma app. Pueden promocionar su contenido, escucharse entre ellos, organizar eventos y ¡mucho más!</p>
-                    <p>Este sistema funcionaría a través de la recopilación de información aportada por los mismos usuarios, actualizando el sitio de forma continua.</p>
-                </div>
-            </div>
-                </div>
-            </section>
-
-            <section class="landing-section strengths-block">
-                <div id="puntosfuertes" class="landing-container strengths-section scroll-section">
-                <div class="vision-subheading">
-                    <h3>Puntos fuertes</h3>
-                    <p>Contamos con herramientas y servicios pensados para acompañar a nuestra comunidad.</p>
-                </div>
-
-                <ul class="strengths-grid">
-                    <li>Servicio de solución de problemas las 24 horas.</li>
-                    <li>Una guía completa sobre cómo utilizar la app.</li>
-                    <li>Afiliados a cientos de géneros y grupos.</li>
-                    <li>Un equipo de producción de calidad profesional.</li>
-                    <li>Un chat en vivo con otros artistas.</li>
-                    <li>Una experiencia 100 % gratuita.</li>
-                    <li>¿Qué esperás para probarla?</li>
-                </ul>
-                </div>
-            </section>
-
-            <section class="landing-section mission-block">
-                <div class="landing-container mission-section editorial-section scroll-section">
-                <figure class="mission-media">
-                    <img src="img/mision.png" alt="Músicos integrantes de una banda" width="1254" height="1254" loading="lazy" decoding="async">
-                </figure>
-
-                <div class="editorial-copy">
-                    <h3>Misión</h3>
-                    <p>Ser una aplicación eficaz y dinámica, reconocida como líder en servicios orientados a la industria musical, con fuerte proyección internacional. Nuestro estandarte es brindar un servicio eficiente y de calidad que aporte activamente al conocimiento de nuestros usuarios, posibilite el desarrollo de nuestro propio valor humano e impacte positivamente en la comunidad. Con la ayuda de nuestro personal y usuarios, aspiramos a ser los mejores.</p>
-                </div>
-                </div>
-            </section>
-
-            <section class="landing-section values-block">
-                <div class="landing-container values-section editorial-section scroll-section">
-                <div class="editorial-heading">
-                    <h3>Valores</h3>
-                </div>
-
-                <ul class="values-list">
-                    <li><strong>Calidad y mejora continua:</strong> tenemos un fuerte compromiso con la búsqueda de la excelencia y el perfeccionamiento.</li>
-                    <li><strong>Compromiso:</strong> con nuestros clientes, accionistas, la comunidad y el medio ambiente.</li>
-                    <li><strong>Transparencia:</strong> somos claros y honestos con nuestros clientes y usuarios finales. La ética es un valor destacado en la organización.</li>
-                    <li><strong>Liderazgo y trabajo en equipo:</strong> llevamos adelante proyectos logrando la participación activa y positiva de los colaboradores.</li>
-                </ul>
-                </div>
-            </section>
-        </article>
-    </main>
-    
-
-
-    
-    <section id="video" class="landing-section fondo2 video-section" aria-labelledby="video-title">
-        <div class="landing-container video-section__inner">
-            <div class="video-section__heading">
-                <h2 id="video-title">¿Qué es Bandeate?</h2>
-                <p id="video-description">Conocé Bandeate en acción: en este breve recorrido te mostramos cómo usar la aplicación y aprovechar sus principales herramientas para conectar con otros músicos.</p>
-            </div>
-
-            <div class="video-section__frame">
-                <video preload="metadata" controls playsinline poster="img/preview/video-preview.png"
-                    aria-describedby="video-description">
-                    <source src="img/videoappsimulado.mp4" type="video/mp4">
-                    Tu navegador no puede reproducir este video.
-                </video>
-            </div>
+          <ul class="strengths-grid">
+            <li>Servicio de solución de problemas las 24 horas.</li>
+            <li>Una guía completa sobre cómo utilizar la app.</li>
+            <li>Afiliados a cientos de géneros y grupos.</li>
+            <li>Un equipo de producción de calidad profesional.</li>
+            <li>Un chat en vivo con otros artistas.</li>
+            <li>Una experiencia 100 % gratuita.</li>
+            <li>¿Qué esperás para probarla?</li>
+          </ul>
         </div>
-    </section>
+      </section>
 
-    <section id="usuario" class="landing-section users-section scroll-section" aria-labelledby="usuarios-title">
-        <div class="landing-container users-section__inner">
-            <div class="users-section__heading">
-                <h2 id="usuarios-title">Usuarios</h2>
-                <p>Experiencias de quienes ya usan Bandeate para conectar, crear y compartir música.</p>
-            </div>
+      <section class="landing-section mission-block">
+        <div class="landing-container mission-section editorial-section scroll-section">
+          <figure class="mission-media">
+            <img src="img/mision.png" alt="Músicos integrantes de una banda" width="1254" height="1254" loading="lazy"
+              decoding="async" />
+          </figure>
 
-            <div class="row g-4 users-grid">
-                <div class="col-12 col-md-4 d-flex">
-                    <article class="card user-card w-100">
-                        <figure class="user-card__photo">
-                            <picture>
-                                <source media="(max-width: 576px)" srcset="img/usuarios/foto1cel.png">
-                                <source media="(max-width: 899px)" srcset="img/usuarios/foto1tablet.png">
-                                <img src="img/usuarios/foto1pc.png" alt="Retrato de Josefina" loading="lazy">
-                            </picture>
-                        </figure>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Josefina</h3>
-                            <p class="card-text">Encontré un grupo rápidamente. Es cómoda y la recomiendo, aunque me gustaría una mejor calidad de sonido.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-12 col-md-4 d-flex">
-                    <article class="card user-card w-100">
-                        <figure class="user-card__photo">
-                            <picture>
-                                <source media="(max-width: 576px)" srcset="img/usuarios/foto2cel.png">
-                                <source media="(max-width: 899px)" srcset="img/usuarios/foto2tablet.png">
-                                <img src="img/usuarios/foto2pc.png" alt="Retrato de Hernán" loading="lazy">
-                            </picture>
-                        </figure>
-
-                        <div class="card-body">
-                            <h3 class="card-title">Hernán</h3>
-                            <p class="card-text">Me la recomendaron y la verdad es que funciona genial. Hay gente muy talentosa en la app.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-12 col-md-4 d-flex">
-                    <article class="card user-card w-100">
-                        <figure class="user-card__photo">
-                            <picture>
-                                <source media="(max-width: 576px)" srcset="img/usuarios/foto3cel.png">
-                                <source media="(max-width: 899px)" srcset="img/usuarios/foto3tablet.png">
-                                <img src="img/usuarios/foto3pc.png" alt="Retrato de María" loading="lazy">
-                            </picture>
-                        </figure>
-
-                        <div class="card-body">
-                            <h3 class="card-title">María</h3>
-                            <p class="card-text">Me gusta la interfaz, aunque al grabar sesiones consume mucha batería.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
+          <div class="editorial-copy">
+            <h3>Misión</h3>
+            <p>
+              Ser una aplicación eficaz y dinámica, reconocida como líder en servicios orientados
+              a la industria musical, con fuerte proyección internacional. Nuestro estandarte es
+              brindar un servicio eficiente y de calidad que aporte activamente al conocimiento de
+              nuestros usuarios, posibilite el desarrollo de nuestro propio valor humano e impacte
+              positivamente en la comunidad. Con la ayuda de nuestro personal y usuarios,
+              aspiramos a ser los mejores.
+            </p>
+          </div>
         </div>
-    </section>
-    <section id="reseña" class="landing-section review-section">
-        <span id="resenas"></span>
-        <div class="landing-container">
-            <div class="review-panel">
+      </section>
+
+      <section class="landing-section values-block">
+        <div class="landing-container values-section editorial-section scroll-section">
+          <div class="editorial-heading">
+            <h3>Valores</h3>
+          </div>
+
+          <ul class="values-list">
+            <li>
+              <strong>Calidad y mejora continua:</strong> tenemos un fuerte compromiso con la
+              búsqueda de la excelencia y el perfeccionamiento.
+            </li>
+            <li>
+              <strong>Compromiso:</strong> con nuestros clientes, accionistas, la comunidad y el
+              medio ambiente.
+            </li>
+            <li>
+              <strong>Transparencia:</strong> somos claros y honestos con nuestros clientes y
+              usuarios finales. La ética es un valor destacado en la organización.
+            </li>
+            <li>
+              <strong>Liderazgo y trabajo en equipo:</strong> llevamos adelante proyectos logrando
+              la participación activa y positiva de los colaboradores.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <section id="video" class="landing-section fondo2 video-section" aria-labelledby="video-title">
+    <div class="landing-container video-section__inner">
+      <div class="video-section__heading">
+        <h2 id="video-title">¿Qué es Bandeate?</h2>
+        <p id="video-description">
+          Conocé Bandeate en acción: en este breve recorrido te mostramos cómo usar la aplicación
+          y aprovechar sus principales herramientas para conectar con otros músicos.
+        </p>
+      </div>
+
+      <div class="video-section__frame">
+        <video preload="metadata" controls playsinline poster="img/preview/video-preview.png"
+          aria-describedby="video-description">
+          <source src="img/videoappsimulado.mp4" type="video/mp4" />
+          Tu navegador no puede reproducir este video.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section id="usuario" class="landing-section users-section scroll-section" aria-labelledby="usuarios-title">
+    <div class="landing-container users-section__inner">
+      <div class="users-section__heading">
+        <h2 id="usuarios-title">Usuarios</h2>
+        <p>Experiencias de quienes ya usan Bandeate para conectar, crear y compartir música.</p>
+      </div>
+
+      <div class="row g-4 users-grid">
+        <div class="col-12 col-md-4 d-flex">
+          <article class="card user-card w-100">
+            <figure class="user-card__photo">
+              <picture>
+                <source media="(max-width: 576px)" srcset="img/usuarios/foto1cel.png" />
+                <source media="(max-width: 899px)" srcset="img/usuarios/foto1tablet.png" />
+                <img src="img/usuarios/foto1pc.png" alt="Retrato de Josefina" loading="lazy" />
+              </picture>
+            </figure>
+
+            <div class="card-body">
+              <h3 class="card-title">Josefina</h3>
+              <p class="card-text">
+                Encontré un grupo rápidamente. Es cómoda y la recomiendo, aunque me gustaría una
+                mejor calidad de sonido.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex">
+          <article class="card user-card w-100">
+            <figure class="user-card__photo">
+              <picture>
+                <source media="(max-width: 576px)" srcset="img/usuarios/foto2cel.png" />
+                <source media="(max-width: 899px)" srcset="img/usuarios/foto2tablet.png" />
+                <img src="img/usuarios/foto2pc.png" alt="Retrato de Hernán" loading="lazy" />
+              </picture>
+            </figure>
+
+            <div class="card-body">
+              <h3 class="card-title">Hernán</h3>
+              <p class="card-text">
+                Me la recomendaron y la verdad es que funciona genial. Hay gente muy talentosa en
+                la app.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex">
+          <article class="card user-card w-100">
+            <figure class="user-card__photo">
+              <picture>
+                <source media="(max-width: 576px)" srcset="img/usuarios/foto3cel.png" />
+                <source media="(max-width: 899px)" srcset="img/usuarios/foto3tablet.png" />
+                <img src="img/usuarios/foto3pc.png" alt="Retrato de María" loading="lazy" />
+              </picture>
+            </figure>
+
+            <div class="card-body">
+              <h3 class="card-title">María</h3>
+              <p class="card-text">
+                Me gusta la interfaz, aunque al grabar sesiones consume mucha batería.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="reseña" class="landing-section review-section">
+    <span id="resenas"></span>
+    <div class="landing-container">
+      <div class="review-panel">
         <div class="row justify-content-center">
-            <div class="col-10">
-                <div class="review-heading">
-                    <h2>Envíanos tu reseña</h2>
-                    <p>Dejá tu opinión sobre la aplicación y ayudanos a mejorar nuestros servicios.</p>
-                </div>
-                <form class="review-form" action="formulario/enviar_formulario.php" method="post" enctype="multipart/form-data">
-
-                    <p class="form-success" id="review-success" role="status" aria-live="polite" hidden>
-                        ¡Gracias! Tu reseña fue enviada correctamente.
-                    </p>
-
-                    <div class="mb-3 control">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"
-                            autocomplete="given-name" minlength="2" required aria-describedby="nombre-error">
-                        <small class="field-error" id="nombre-error">Ingresá un nombre válido.</small>
-                    </div>
-
-                    <div class="mb-3 control">
-                        <label for="apellido" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido"
-                            autocomplete="family-name" minlength="2" required aria-describedby="apellido-error">
-                        <small class="field-error" id="apellido-error">Ingresá un apellido válido.</small>
-                    </div>
-                   
-                    <div class="mb-3 control">
-                        <label for="mail" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="mail" name="mail" placeholder="Correo electrónico"
-                            autocomplete="email" required aria-describedby="mail-error">
-                        <small class="field-error" id="mail-error">Ingresá un correo válido.</small>
-                    </div>
-
-                    <div class="mb-3 control">
-                        <label for="comentarios" class="form-label">Comentario</label>
-                        <textarea name="comentario" class="form-control" id="comentarios" cols="22" rows="3"
-                            minlength="10" maxlength="80" placeholder="Escribí tu reseña"
-                            required aria-describedby="comentarios-error"></textarea>
-                        <small class="field-error" id="comentarios-error">Escribí un comentario de al menos 10 caracteres.</small>
-                    </div>
-                    <div class="review-actions">
-                        <input type="reset" value="Limpiar">
-                        <input type="submit" value="Enviar">
-                    </div>
-                </form>
+          <div class="col-10">
+            <div class="review-heading">
+              <h2>Envíanos tu reseña</h2>
+              <p>Dejá tu opinión sobre la aplicación y ayudanos a mejorar nuestros servicios.</p>
             </div>
+            <form class="review-form" action="formulario/enviar_formulario.php" method="post"
+              enctype="multipart/form-data">
+              <p class="form-success" id="review-success" role="status" aria-live="polite" hidden>
+                ¡Gracias! Tu reseña fue enviada correctamente.
+              </p>
+
+              <div class="mb-3 control">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"
+                  autocomplete="given-name" minlength="2" required aria-describedby="nombre-error" />
+                <small class="field-error" id="nombre-error">Ingresá un nombre válido.</small>
+              </div>
+
+              <div class="mb-3 control">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido"
+                  autocomplete="family-name" minlength="2" required aria-describedby="apellido-error" />
+                <small class="field-error" id="apellido-error">Ingresá un apellido válido.</small>
+              </div>
+
+              <div class="mb-3 control">
+                <label for="mail" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="mail" name="mail" placeholder="Correo electrónico"
+                  autocomplete="email" required aria-describedby="mail-error" />
+                <small class="field-error" id="mail-error">Ingresá un correo válido.</small>
+              </div>
+
+              <div class="mb-3 control">
+                <label for="comentarios" class="form-label">Comentario</label>
+                <textarea name="comentario" class="form-control" id="comentarios" cols="22" rows="3" minlength="10"
+                  maxlength="80" placeholder="Escribí tu reseña" required
+                  aria-describedby="comentarios-error"></textarea>
+                <small class="field-error" id="comentarios-error">Escribí un comentario de al menos 10
+                  caracteres.</small>
+              </div>
+              <div class="review-actions">
+                <input type="reset" value="Limpiar" />
+                <input type="submit" value="Enviar" />
+              </div>
+            </form>
+          </div>
         </div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="site-footer" class="site-footer fondo2">
+    <div class="site-footer__inner">
+      <div class="site-footer__main">
+        <a class="site-footer__brand" href="#inicio" data-ancla="true" aria-label="Bandeate, volver al inicio">
+          <img src="img/logo/logo-texto.svg" alt="Bandeate" />
+          <span>Conectando músicos, ideas y proyectos.</span>
+        </a>
+
+        <nav class="site-footer__nav" aria-label="Navegación del pie de página">
+          <a class="site-footer__home-link" href="#inicio" data-ancla="true">Inicio</a>
+          <a href="#pantallas" data-ancla="true">Pantallas</a>
+          <a href="#vision" data-ancla="true">Visión</a>
+          <a href="#video" data-ancla="true">Video</a>
+          <a href="#usuario" data-ancla="true">Usuarios</a>
+          <a href="#resenas" data-ancla="true">Reseñas</a>
+        </nav>
+
+        <ul class="site-footer__social" aria-label="Redes sociales">
+          <li>
+            <a class="footer-social-link" href="https://www.instagram.com" id="instagram" target="_blank"
+              rel="noopener noreferrer" aria-label="Bandeate en Instagram">Instagram</a>
+          </li>
+          <li>
+            <a class="footer-social-link" href="https://es-la.facebook.com" id="facebook" target="_blank"
+              rel="noopener noreferrer" aria-label="Bandeate en Facebook">Facebook</a>
+          </li>
+          <li>
+            <a class="footer-social-link" href="https://twitter.com" id="twitter" target="_blank"
+              rel="noopener noreferrer" aria-label="Bandeate en X">X</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2026 Bandeate. Todos los derechos reservados.</p>
+        <div class="site-footer__legal" aria-label="Información legal">
+          <span>Privacidad</span>
+          <span>Términos</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </footer>
 
+  <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="css/js/jquery-3.6.0.min.js"></script>
+  <script src="css/js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
 
-    <footer id="site-footer" class="site-footer fondo2">
-        <div class="site-footer__inner">
-            <div class="site-footer__main">
-                <a class="site-footer__brand" href="#inicio" data-ancla="true" aria-label="Bandeate, volver al inicio">
-                    <img src="img/logo/logo-texto.svg" alt="Bandeate">
-                    <span>Conectando músicos, ideas y proyectos.</span>
-                </a>
+  <style>
+    .sr-listo {
+      transition:
+        opacity 0.65s ease,
+        transform 0.65s ease;
+    }
 
-                <nav class="site-footer__nav" aria-label="Navegación del pie de página">
-                    <a class="site-footer__home-link" href="#inicio" data-ancla="true">Inicio</a>
-                    <a href="#pantallas" data-ancla="true">Pantallas</a>
-                    <a href="#vision" data-ancla="true">Visión</a>
-                    <a href="#video" data-ancla="true">Video</a>
-                    <a href="#usuario" data-ancla="true">Usuarios</a>
-                    <a href="#resenas" data-ancla="true">Reseñas</a>
-                </nav>
+    .sr-izq {
+      opacity: 0;
+      transform: translateX(-48px);
+    }
 
-                <ul class="site-footer__social" aria-label="Redes sociales">
-                    <li><a class="footer-social-link" href="https://www.instagram.com" id="instagram" target="_blank" rel="noopener noreferrer" aria-label="Bandeate en Instagram">Instagram</a></li>
-                    <li><a class="footer-social-link" href="https://es-la.facebook.com" id="facebook" target="_blank" rel="noopener noreferrer" aria-label="Bandeate en Facebook">Facebook</a></li>
-                    <li><a class="footer-social-link" href="https://twitter.com" id="twitter" target="_blank" rel="noopener noreferrer" aria-label="Bandeate en X">X</a></li>
-                </ul>
-            </div>
+    .sr-der {
+      opacity: 0;
+      transform: translateX(48px);
+    }
 
-            <div class="site-footer__bottom">
-                <p>© 2026 Bandeate. Todos los derechos reservados.</p>
-                <div class="site-footer__legal" aria-label="Información legal">
-                    <span>Privacidad</span>
-                    <span>Términos</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
+    .sr-ok {
+      opacity: 1;
+      transform: none;
+    }
 
-    <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="css/js/jquery-3.6.0.min.js"></script>
-    <script src="css/js/jquery.fancybox.min.js"></script>
-    <script src="js/main.js"></script>
+    @media (max-width: 1199px) {
 
-    <style>
-      .sr-listo { transition: opacity .65s ease, transform .65s ease; }
-      .sr-izq   { opacity: 0; transform: translateX(-48px); }
-      .sr-der   { opacity: 0; transform: translateX( 48px); }
-      .sr-ok    { opacity: 1; transform: none; }
-
-      @media (max-width: 1199px) {
-        .sr-izq,
-        .sr-der { transform: translateY(24px); }
+      .sr-izq,
+      .sr-der {
+        transform: translateY(24px);
       }
-    </style>
-    <script>
-      window.addEventListener('load', function () {
-        var secciones = document.querySelectorAll('.scroll-section');
-        if (!secciones.length) return;
+    }
+  </style>
+  <script>
+    window.addEventListener("load", function () {
+      var secciones = document.querySelectorAll(".scroll-section");
+      if (!secciones.length) return;
 
-        var observer = new IntersectionObserver(function (entradas) {
+      var observer = new IntersectionObserver(
+        function (entradas) {
           entradas.forEach(function (entrada) {
             var sec = entrada.target;
             if (entrada.isIntersecting) {
-              sec.classList.remove('sr-izq', 'sr-der');
-              sec.classList.add('sr-ok');
+              sec.classList.remove("sr-izq", "sr-der");
+              sec.classList.add("sr-ok");
             } else {
-              sec.classList.remove('sr-ok');
+              sec.classList.remove("sr-ok");
               sec.classList.add(sec.dataset.srDir);
             }
           });
-        }, { threshold: 0, rootMargin: '0px 0px -100px 0px' });
+        },
+        { threshold: 0, rootMargin: "0px 0px -100px 0px" },
+      );
 
-        secciones.forEach(function (sec, i) {
-          sec.classList.add('sr-listo');
-          sec.dataset.srDir = i % 2 === 0 ? 'sr-izq' : 'sr-der';
-          if (sec.getBoundingClientRect().top > window.innerHeight) {
-            sec.classList.add(sec.dataset.srDir);
-          }
-          observer.observe(sec);
-        });
+      secciones.forEach(function (sec, i) {
+        sec.classList.add("sr-listo");
+        sec.dataset.srDir = i % 2 === 0 ? "sr-izq" : "sr-der";
+        if (sec.getBoundingClientRect().top > window.innerHeight) {
+          sec.classList.add(sec.dataset.srDir);
+        }
+        observer.observe(sec);
       });
-    </script>
+    });
+  </script>
 </body>
 
 </html>

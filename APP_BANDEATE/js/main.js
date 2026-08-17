@@ -124,7 +124,16 @@
         const next = carousel?.querySelector('.screens-arrow-next');
         if (!carousel || !previous || !next) return;
 
-        const edgeSize = 76;
+        // Zona de arranque más ancha (hasta un 32% del ancho visible, entre
+        // 160 y 340px) para que empiece a moverse más cerca del centro.
+        // La velocidad crece de forma cuadrática (ease-in): recién entrando
+        // a la zona es casi imperceptible, y se acelera cuanto más cerca
+        // del borde real está el puntero.
+        const edgeMin = 160;
+        const edgeMax = 340;
+        const edgeRatio = 0.32;
+        const speedMin = 0.4;
+        const speedMax = 15;
         let direction = 0;
         let speed = 0;
         let frame = null;
@@ -135,9 +144,18 @@
             next.classList.toggle('is-muted', viewport.scrollLeft >= maxScroll - 2);
         };
 
+        // El scroll-snap del CSS (#galeria.screens-viewport) pelea con el barrido
+        // manual de scrollLeft frame a frame: el navegador lo reencarrila al punto
+        // de snap más cercano y el carrusel queda "trabado" al hover. Lo apagamos
+        // mientras dura el auto-scroll por hover y lo restauramos al terminar.
+        const setSnapEnabled = (enabled) => {
+            viewport.classList.toggle('screens-viewport--no-snap', !enabled);
+        };
+
         const move = () => {
             if (!direction) {
                 frame = null;
+                setSnapEnabled(true);
                 return;
             }
 
@@ -151,6 +169,7 @@
             if (reachedStart || reachedEnd) {
                 direction = 0;
                 frame = null;
+                setSnapEnabled(true);
                 return;
             }
 
@@ -159,24 +178,36 @@
 
         viewport.addEventListener('mousemove', (event) => {
             const bounds = viewport.getBoundingClientRect();
+            const edgeSize = Math.min(edgeMax, Math.max(edgeMin, bounds.width * edgeRatio));
             const distanceFromLeft = event.clientX - bounds.left;
             const distanceFromRight = bounds.right - event.clientX;
 
+            const speedFor = (distance) => {
+                const progress = Math.min(1, Math.max(0, (edgeSize - distance) / edgeSize));
+                return speedMin + (speedMax - speedMin) * progress * progress;
+            };
+
             if (distanceFromLeft < edgeSize) {
                 direction = -1;
-                speed = Math.max(1, (edgeSize - distanceFromLeft) / 9);
+                speed = speedFor(distanceFromLeft);
             } else if (distanceFromRight < edgeSize) {
                 direction = 1;
-                speed = Math.max(1, (edgeSize - distanceFromRight) / 9);
+                speed = speedFor(distanceFromRight);
             } else {
                 direction = 0;
             }
 
-            if (direction && frame === null) frame = requestAnimationFrame(move);
+            if (direction) {
+                setSnapEnabled(false);
+                if (frame === null) frame = requestAnimationFrame(move);
+            } else {
+                setSnapEnabled(true);
+            }
         });
 
         viewport.addEventListener('mouseleave', () => {
             direction = 0;
+            setSnapEnabled(true);
         });
         viewport.addEventListener('scroll', updateArrows, { passive: true });
         window.addEventListener('resize', updateArrows);

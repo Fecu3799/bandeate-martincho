@@ -1186,6 +1186,12 @@ body {
   padding: 0.35rem 0 0.75rem;
 }
 
+/* Mientras el JS mueve el carrusel por hover en los bordes, se apaga el
+   scroll-snap para que no pelee contra el barrido de scrollLeft. */
+#galeria.screens-viewport.screens-viewport--no-snap {
+  scroll-snap-type: none;
+}
+
 .screens-track {
   gap: clamp(1rem, 2vw, 1.75rem);
   padding: 0 0.15rem;
