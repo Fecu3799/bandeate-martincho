@@ -1777,8 +1777,7 @@ section.landing-section {
   margin-bottom: 0 !important;
 }
 
-#reseña .review-form .control:nth-child(3),
-#reseña .review-form .control:nth-child(4),
+#reseña .review-form .control--full,
 #reseña .review-actions {
   grid-column: 1 / -1;
 }
@@ -1814,7 +1813,7 @@ section.landing-section {
 }
 
 #reseña .review-form textarea.form-control {
-  min-height: 6.25rem;
+  min-height: 9.5rem;
   resize: vertical;
 }
 
@@ -1861,6 +1860,7 @@ section.landing-section {
 }
 
 #reseña .form-success {
+  grid-column: 1 / -1;
   margin: 0 0 1.25rem;
   padding: 0.75rem 1rem;
   border: 1px solid rgba(20, 148, 92, 0.3);
